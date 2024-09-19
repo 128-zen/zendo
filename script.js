@@ -124,7 +124,7 @@
       let link = document.createElement("a");
       link.setAttribute("href", `https://${safeDomain}/hc/search?query=${safeKeyword}`);
       link.appendChild(linkText);
-      keywordsElement.appendChild(link);
+      keywordsElement.querySelector('.popular-keywords__items').appendChild(link);
     });
   }
 
