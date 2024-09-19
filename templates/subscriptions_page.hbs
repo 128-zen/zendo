@@ -1,0 +1,82 @@
+<div class="my-activities-nav">
+  <div class="container">
+    <nav class="collapsible-nav fade-in-up">
+      <button type="button" class="collapsible-nav-toggle" aria-label="{{t 'toggle_navigation'}}" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true" class="collapsible-nav-toggle-icon chevron-icon">
+          <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true" class="collapsible-nav-toggle-icon x-icon">
+          <path stroke="currentColor" stroke-linecap="round" d="M3 9l6-6m0 6L3 3"/>
+        </svg>
+      </button>
+      <ul class="collapsible-nav-list">
+        <li>{{link 'contributions'}}</li>
+        <li class="current">
+          <a href="{{page_path 'following'}}" aria-current="page">{{ t 'following' }}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<div class="container">
+  <header class="my-activities-header">
+    <h1 class="fade-in-up">{{t 'following'}}</h1>
+  </header>
+
+  <div class="my-activities-following-header">
+    <span class="dropdown fade-in-up">
+      <button class="dropdown-toggle" aria-haspopup="true">
+        {{current_filter.label}}
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.09554 5.707C6.08849 5.71484 6.08122 5.72252 6.07372 5.73002C5.84272 5.96102 5.46799 5.96102 5.23699 5.73002L0.648451 1.13466C0.532979 1.01908 0.475098 0.866954 0.475098 0.71666C0.475098 0.567493 0.531702 0.414155 0.649609 0.297501C0.880703 0.0676067 1.2546 0.0679752 1.48523 0.298605L5.65559 4.47459L9.86512 0.270131C10.0961 0.0392166 10.4709 0.0391598 10.7018 0.270131C10.9328 0.501129 10.9328 0.87586 10.7018 1.10686L6.09554 5.707Z" fill="#16182D"></path>
+        </svg>
+      </button>
+      <span class="dropdown-menu" role="menu">
+        {{#each filters}}
+          <a href="{{url}}" aria-checked="{{selected}}" role="menuitemradio">
+            {{name}}
+          </a>
+        {{/each}}
+      </span>
+    </span>
+  </div>
+
+  <div id="main-content" class="requests">
+    {{#if subscriptions}}
+      <table class="table my-activities-table subscriptions-table fade-in-up">
+        <thead>
+          <tr>
+            <th>{{t 'title'}}</th>
+            <th>{{t 'type'}}</th>
+            <th>{{t 'subscription'}}</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each subscriptions}}
+            <tr>
+              <td>
+                {{#is type 'user'}}
+                  <img class="user-avatar" src="{{avatar_url}}" alt="">
+                {{/is}}
+                <a href="{{url}}" title="{{title}}" class="striped-list-title">
+                  {{excerpt title characters=60}}
+                </a>
+              </td>
+              <td>{{name}}</td>
+              <td>{{following}}</td>
+              <td class="subscriptions-subscribe">
+                {{subscribe}}
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+
+    {{pagination}}
+    {{else}}
+      <p class="no-activities fade-in-up">{{t 'not_following'}}</p>
+    {{/if}}
+  </div>
+</div>

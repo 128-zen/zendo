@@ -1,0 +1,330 @@
+{{!-- Top Banner Section --}}
+<section id="main-content" class="hero">
+  <div class="container section">
+    <div class="hero__content">
+      <h1 class="hero-text fade-in-up">{{settings.hero_heading}}</h1>
+      {{#if settings.show_hero_text}}
+        <p class="p-large fade-in-up">{{settings.hero_text}}</p>
+      {{/if}}
+      <div class="hero-inner fade-in-up">
+        <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+          <path d="M15.49 14.645L12.24 11.395H12.205C13.2068 10.2139 13.713 8.69119 13.6178 7.1454C13.5226 5.59961 12.8334 4.15049 11.6943 3.10119C10.5553 2.05189 9.05456 1.48368 7.50616 1.51542C5.95777 1.54717 4.48162 2.17641 3.38651 3.27152C2.2914 4.36663 1.66216 5.84278 1.63041 7.39117C1.59867 8.93957 2.16688 10.4403 3.21618 11.5793C4.26548 12.7184 5.7146 13.4076 7.26039 13.5028C8.80618 13.598 10.3289 13.0918 11.51 12.09C11.51 12.09 11.51 12.115 11.51 12.125L14.76 15.375C14.8065 15.4219 14.8618 15.4591 14.9227 15.4845C14.9837 15.5099 15.049 15.5229 15.115 15.5229C15.181 15.5229 15.2464 15.5099 15.3073 15.4845C15.3683 15.4591 15.4236 15.4219 15.47 15.375C15.5213 15.3297 15.5627 15.2742 15.5917 15.2122C15.6206 15.1502 15.6365 15.0828 15.6384 15.0144C15.6403 14.9459 15.6281 14.8778 15.6026 14.8143C15.577 14.7508 15.5387 14.6932 15.49 14.645ZM7.63504 12.5C6.64613 12.5 5.67943 12.2068 4.85719 11.6574C4.03494 11.108 3.39408 10.3271 3.01564 9.41346C2.6372 8.49983 2.53818 7.4945 2.73111 6.5246C2.92404 5.55469 3.40024 4.66378 4.0995 3.96451C4.79877 3.26525 5.68968 2.78905 6.65959 2.59612C7.62949 2.40319 8.63482 2.50221 9.54845 2.88065C10.4621 3.25909 11.243 3.89995 11.7924 4.7222C12.3418 5.54444 12.635 6.51114 12.635 7.50005C12.635 8.15666 12.5057 8.80684 12.2544 9.41346C12.0032 10.0201 11.6349 10.5713 11.1706 11.0356C10.7063 11.4999 10.1551 11.8682 9.54845 12.1194C8.94183 12.3707 8.29165 12.5 7.63504 12.5Z" fill="#686B71"/>
+        </svg>
+        {{search instant=settings.instant_search class='search search-full'}}
+      </div>
+      {{#if settings.show_popular_keywords}}
+        <div class="popular-keywords fade-in-up" data-keywords="{{settings.popular_keywords}}">
+          <p>{{settings.popular_keywords_description}}</p>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</section>
+
+{{#if settings.show_introduction_section}}
+{{!-- Introduction Section --}}
+<section class="introduction section">
+  <div class="container">
+    <div class="introduction__items">
+      <div class="introduction__item fade-in-up">
+        <img src="{{settings.introduction_item1_img}}" alt="icon">
+        <h5><a href="{{settings.introduction_item1_link}}">{{settings.introduction_item1_heading}}</a></h5>
+        <p>{{settings.introduction_item1_subtitle}}</p>
+      </div>
+      <div class="introduction__item fade-in-up">
+        <img src="{{settings.introduction_item2_img}}" alt="icon">
+        <h5><a href="{{settings.introduction_item2_link}}">{{settings.introduction_item2_heading}}</a></h5>
+        <p>{{settings.introduction_item2_subtitle}}</p>
+      </div>
+      <div class="introduction__item fade-in-up">
+        <img src="{{settings.introduction_item3_img}}" alt="icon">
+        <h5><a href="{{settings.introduction_item3_link}}">{{settings.introduction_item3_heading}}</a></h5>
+        <p>{{settings.introduction_item3_subtitle}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{{/if}}
+
+{{#if settings.show_category1_section}}
+{{!-- Categories Section --}}
+<section class="categories section">
+  <div class="container">
+    {{#each categories}}
+      <div class="categories__item">
+        <div class="categories__head">
+          <h2 class="fade-in-up">{{name}}</h2>
+          <div class="fade-in-up">
+            <a class="button button-primary" href="{{url}}">{{t 'see_all_sections'}}</a>
+          </div>
+        </div>
+        <div class="categories__sections">
+          {{#each sections}}
+            <div class="categories__section fade-in-up">
+              <div>
+                <h6><a href="{{url}}">{{name}}</a></h6>
+                <ul>
+                  {{#each articles}}
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                      <path d="M13.3906 5.85938C12.6368 5.85938 12.0234 5.24605 12.0234 4.49219V0H5.03125C3.8466 0 2.88281 0.963789 2.88281 2.14844V17.8516C2.88281 19.0362 3.8466 20 5.03125 20H15.9688C17.1534 20 18.1172 19.0362 18.1172 17.8516V5.85938H13.3906ZM6.08594 14.0625H8.92656C9.25016 14.0625 9.5125 14.3248 9.5125 14.6484C9.5125 14.972 9.25016 15.2344 8.92656 15.2344H6.08594C5.76234 15.2344 5.5 14.972 5.5 14.6484C5.5 14.3248 5.76234 14.0625 6.08594 14.0625ZM5.5 11.5234C5.5 11.1998 5.76234 10.9375 6.08594 10.9375H14.6797C15.0033 10.9375 15.2656 11.1998 15.2656 11.5234C15.2656 11.847 15.0033 12.1094 14.6797 12.1094H6.08594C5.76234 12.1094 5.5 11.847 5.5 11.5234ZM14.6797 7.8125C15.0033 7.8125 15.2656 8.07484 15.2656 8.39844C15.2656 8.72203 15.0033 8.98438 14.6797 8.98438H6.08594C5.76234 8.98438 5.5 8.72203 5.5 8.39844C5.5 8.07484 5.76234 7.8125 6.08594 7.8125H14.6797Z" fill="#B9E97D"/>
+                      <path d="M13.1953 4.49219C13.1953 4.59989 13.2829 4.6875 13.3906 4.6875H17.856C17.7488 4.48961 17.6109 4.30785 17.4453 4.1511L13.6788 0.587738C13.5326 0.449457 13.3698 0.334105 13.1954 0.243011V4.49219H13.1953Z" fill="#B9E97D"/>
+                    </svg>
+                    <a href="{{url}}">{{title}}</a>
+                  </li>
+                  {{/each}}
+                </ul>
+              </div>
+              <a class="button button-secondary" href="{{url}}">{{t 'show_all_articles'}}</a>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>
+{{/if}}
+
+{{#if settings.show_category2_section}}
+{{!-- Categories Section --}}
+<section class="categories categories-layout2 section">
+  <div class="container">
+    {{#if settings.show_category2_header}}
+      <div class="categories__header">
+        <h2>{{settings.category2_heading}}</h2>
+        {{#if settings.show_category2_subtitle}}
+          <p>{{settings.category2_subtitle}}</p>
+        {{/if}}
+      </div>
+    {{/if}}
+    <div class="categories__list">
+      {{#each categories}}
+        <div class="categories__section fade-in-up">
+          <div>
+            <h5><a href="{{url}}">{{name}}</a></h5>
+            <ul>
+              {{#each sections}}
+                {{#each articles}}
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                    <path d="M13.3906 5.85938C12.6368 5.85938 12.0234 5.24605 12.0234 4.49219V0H5.03125C3.8466 0 2.88281 0.963789 2.88281 2.14844V17.8516C2.88281 19.0362 3.8466 20 5.03125 20H15.9688C17.1534 20 18.1172 19.0362 18.1172 17.8516V5.85938H13.3906ZM6.08594 14.0625H8.92656C9.25016 14.0625 9.5125 14.3248 9.5125 14.6484C9.5125 14.972 9.25016 15.2344 8.92656 15.2344H6.08594C5.76234 15.2344 5.5 14.972 5.5 14.6484C5.5 14.3248 5.76234 14.0625 6.08594 14.0625ZM5.5 11.5234C5.5 11.1998 5.76234 10.9375 6.08594 10.9375H14.6797C15.0033 10.9375 15.2656 11.1998 15.2656 11.5234C15.2656 11.847 15.0033 12.1094 14.6797 12.1094H6.08594C5.76234 12.1094 5.5 11.847 5.5 11.5234ZM14.6797 7.8125C15.0033 7.8125 15.2656 8.07484 15.2656 8.39844C15.2656 8.72203 15.0033 8.98438 14.6797 8.98438H6.08594C5.76234 8.98438 5.5 8.72203 5.5 8.39844C5.5 8.07484 5.76234 7.8125 6.08594 7.8125H14.6797Z" fill="#B9E97D"/>
+                    <path d="M13.1953 4.49219C13.1953 4.59989 13.2829 4.6875 13.3906 4.6875H17.856C17.7488 4.48961 17.6109 4.30785 17.4453 4.1511L13.6788 0.587738C13.5326 0.449457 13.3698 0.334105 13.1954 0.243011V4.49219H13.1953Z" fill="#B9E97D"/>
+                  </svg>
+                  <a href="{{url}}">{{title}}</a>
+                </li>
+                {{/each}}
+              {{/each}}
+            </ul>
+          </div>
+          <a class="button button-secondary" href="{{url}}">{{t 'see_all_sections'}}</a>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+{{/if}}
+
+{{!-- Popular Videos Section --}}
+{{#if settings.show_videos}}
+<section class="videos section">
+  <div class="container">
+    <div class="videos__head">
+      <h2 class="fade-in-up">{{settings.videos_heading}}</h2>
+      <a class="button button-primary" href="{{settings.videos_button_link}}" target="_blank">{{settings.videos_button}}</a>
+    </div>
+    <div class="videos__list">
+      <div class="videos__item fade-in-up">
+        <div class="videos__img">
+          <img src="{{settings.videos_img1}}" alt="Video Thumbnail" data-video-src="{{settings.videos_link1}}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="61" height="61" viewBox="0 0 61 61" fill="none">
+            <circle cx="30.6668" cy="30.3" r="30.295" fill="#FCE8DB"/>
+            <path d="M41.6075 29.0774C42.5487 29.6208 42.5487 30.9792 41.6075 31.5226L26.2554 40.3861C25.3143 40.9295 24.1378 40.2503 24.1378 39.1635L24.1378 21.4365C24.1378 20.3497 25.3143 19.6705 26.2554 20.2139L41.6075 29.0774Z" fill="#F37F1C"/>
+          </svg>
+        </div>
+        <h4>{{settings.videos_heading1}}</h4>
+        <p>{{settings.videos_description1}}</p>
+      </div>
+      <div class="videos__item fade-in-up">
+        <div class="videos__img">
+          <img src="{{settings.videos_img2}}" alt="Video Thumbnail" data-video-src="{{settings.videos_link2}}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="61" height="61" viewBox="0 0 61 61" fill="none">
+            <circle cx="30.6668" cy="30.3" r="30.295" fill="#FCE8DB"/>
+            <path d="M41.6075 29.0774C42.5487 29.6208 42.5487 30.9792 41.6075 31.5226L26.2554 40.3861C25.3143 40.9295 24.1378 40.2503 24.1378 39.1635L24.1378 21.4365C24.1378 20.3497 25.3143 19.6705 26.2554 20.2139L41.6075 29.0774Z" fill="#F37F1C"/>
+          </svg>
+        </div>
+        <h4>{{settings.videos_heading2}}</h4>
+        <p>{{settings.videos_description2}}</p>
+      </div>
+      <div class="videos__item fade-in-up">
+        <div class="videos__img">
+          <img src="{{settings.videos_img3}}" alt="Video Thumbnail" data-video-src="{{settings.videos_link3}}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="61" height="61" viewBox="0 0 61 61" fill="none">
+            <circle cx="30.6668" cy="30.3" r="30.295" fill="#FCE8DB"/>
+            <path d="M41.6075 29.0774C42.5487 29.6208 42.5487 30.9792 41.6075 31.5226L26.2554 40.3861C25.3143 40.9295 24.1378 40.2503 24.1378 39.1635L24.1378 21.4365C24.1378 20.3497 25.3143 19.6705 26.2554 20.2139L41.6075 29.0774Z" fill="#F37F1C"/>
+          </svg>
+        </div>
+        <h4>{{settings.videos_heading3}}</h4>
+        <p>{{settings.videos_description3}}</p>
+      </div>
+    </div>
+  </div>
+
+  {{!-- Modal window --}}
+  <div class="video-modal">
+    <span class="close">×</span>
+    <iframe width="640" height="360" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+{{/if}}
+
+{{#if settings.show_faq_section}}
+{{!-- FAQ Section --}}
+<section class="faq section">
+  <div class="container">
+    <h2 class="fade-in-up">{{settings.faq_heading}}</h2>
+    <p class="fade-in-up">{{settings.faq_subtitle}}</p>
+    <div class="faq__items">
+        <div class="faq__item fade-in-up">
+          <div>
+            <h6>{{settings.faq_item1_heading}}</h6>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                <path d="M1.5 5L10.5 5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+          <p>{{settings.faq_item1_text}}</p>
+        </div>
+        <div class="faq__item fade-in-up">
+          <div>
+            <h6>{{settings.faq_item2_heading}}</h6>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                <path d="M1.5 5L10.5 5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+          <p>{{settings.faq_item2_text}}</p>
+        </div>
+        <div class="faq__item fade-in-up">
+          <div>
+            <h6>{{settings.faq_item3_heading}}</h6>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                <path d="M1.5 5L10.5 5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+          <p>{{settings.faq_item3_text}}</p>
+        </div>
+        <div class="faq__item fade-in-up">
+          <div>
+            <h6>{{settings.faq_item4_heading}}</h6>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                <path d="M1.5 5L10.5 5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+          <p>{{settings.faq_item4_text}}</p>
+        </div>
+        {{#if settings.show_faq_item5}}
+          <div class="faq__item fade-in-up">
+            <div>
+              <h6>{{settings.faq_item5_heading}}</h6>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                  <path d="M1.5 5L10.5 5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </div>
+            <p>{{settings.faq_item5_text}}</p>
+          </div>
+        {{/if}}
+        {{#if settings.show_faq_item6}}
+          <div class="faq__item fade-in-up">
+            <div>
+              <h6>{{settings.faq_item6_heading}}</h6>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                  <path d="M1.5 5L10.5 5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </div>
+            <p>{{settings.faq_item6_text}}</p>
+          </div>
+        {{/if}}
+        {{#if settings.show_faq_item7}}
+          <div class="faq__item fade-in-up">
+            <div>
+              <h6>{{settings.faq_item7_heading}}</h6>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                  <path d="M1.5 5L10.5 5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </div>
+            <p>{{settings.faq_item7_text}}</p>
+          </div>
+        {{/if}}
+        {{#if settings.show_faq_item8}}
+          <div class="faq__item fade-in-up">
+            <div>
+              <h6>{{settings.faq_item8_heading}}</h6>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                  <path d="M1.5 5L10.5 5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </div>
+            <p>{{settings.faq_item8_text}}</p>
+          </div>
+        {{/if}}
+    </div>
+  </div>
+</section>
+{{/if}}
+
+{{#if settings.show_find_solution_section}}
+{{!-- Find Solution Section --}}
+<section class="find-solution section">
+  <div class="container">
+    <h2>{{settings.find_solution_heading}}</h2>
+    <p>{{settings.find_solution_subtitle}}</p>
+    <div class="find-solution__items">
+      <div class="find-solution__item fade-in-up">
+        <div class="find-solution__head">
+          <div>
+            <img src="{{settings.find_solution_item1_img}}" alt="item">
+          </div>
+          <h4><a href="{{settings.find_solution_item1_link}}">{{settings.find_solution_item1_heading}}</a></h4>
+        </div>
+        <p class="p-small">{{settings.find_solution_item1_text}}</p>
+      </div>
+      <div class="find-solution__item fade-in-up">
+        <div class="find-solution__head">
+          <div>
+            <img src="{{settings.find_solution_item2_img}}" alt="item">
+          </div>
+          <h4><a href="{{settings.find_solution_item2_link}}">{{settings.find_solution_item2_heading}}</a></h4>
+        </div>
+        <p class="p-small">{{settings.find_solution_item2_text}}</p>
+      </div>
+      <div class="find-solution__item fade-in-up">
+        <div class="find-solution__head">
+          <div>
+            <img src="{{settings.find_solution_item3_img}}" alt="item">
+          </div>
+          <h4><a href="{{settings.find_solution_item3_link}}">{{settings.find_solution_item3_heading}}</a></h4>
+        </div>
+        <p class="p-small">{{settings.find_solution_item3_text}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{{/if}}
+
+
+
+

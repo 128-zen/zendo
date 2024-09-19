@@ -1,0 +1,122 @@
+<section class="topic-page section">
+  <div class="container">
+    
+    {{!-- Page Header  --}}
+    <header class="page-header fade-in-up">
+      <div>     
+        <h1>
+          {{topic.name}}
+          {{#if topic.internal}}
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-lock" title="{{t 'internal'}}">
+              <rect width="12" height="9" x="2" y="7" fill="currentColor" rx="1" ry="1"/>
+              <path fill="none" stroke="currentColor" d="M4.5 7.5V4a3.5 3.5 0 017 0v3.5"/>
+            </svg>
+          {{/if}}
+        </h1>
+        {{#if topic.description}}
+          <p class="page-header-description fade-in-up">{{topic.description}}</p>
+        {{/if}}
+      </div>
+      {{#if settings.show_follow_topic}}
+        <div class="community-follow">
+          {{subscribe}}
+        </div>
+      {{/if}}
+    </header>
+
+    <div class="topic-header fade-in-up">
+      <span class="topic-filters">
+        <span class="dropdown">
+          <button class="dropdown-toggle" aria-haspopup="true">
+            {{current_filter.label}}
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.09554 5.707C6.08849 5.71484 6.08122 5.72252 6.07372 5.73002C5.84272 5.96102 5.46799 5.96102 5.23699 5.73002L0.648451 1.13466C0.532979 1.01908 0.475098 0.866954 0.475098 0.71666C0.475098 0.567493 0.531702 0.414155 0.649609 0.297501C0.880703 0.0676067 1.2546 0.0679752 1.48523 0.298605L5.65559 4.47459L9.86512 0.270131C10.0961 0.0392166 10.4709 0.0391598 10.7018 0.270131C10.9328 0.501129 10.9328 0.87586 10.7018 1.10686L6.09554 5.707Z" fill="#16182D"/>
+            </svg>
+          </button>
+          <span class="dropdown-menu" role="menu">
+            {{#each filters}}
+              <a href="{{url}}" aria-checked="{{selected}}" role="menuitemradio">
+                {{name}}
+              </a>
+            {{/each}}
+          </span>
+        </span>
+        <span class="dropdown">
+          <button class="dropdown-toggle" aria-haspopup="true">
+            {{current_sorter.label}}
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.09554 5.707C6.08849 5.71484 6.08122 5.72252 6.07372 5.73002C5.84272 5.96102 5.46799 5.96102 5.23699 5.73002L0.648451 1.13466C0.532979 1.01908 0.475098 0.866954 0.475098 0.71666C0.475098 0.567493 0.531702 0.414155 0.649609 0.297501C0.880703 0.0676067 1.2546 0.0679752 1.48523 0.298605L5.65559 4.47459L9.86512 0.270131C10.0961 0.0392166 10.4709 0.0391598 10.7018 0.270131C10.9328 0.501129 10.9328 0.87586 10.7018 1.10686L6.09554 5.707Z" fill="#16182D"/>
+            </svg>
+          </button>
+          <span class="dropdown-menu" role="menu">
+            {{#each sorters}}
+              <a href="{{url}}" aria-checked="{{selected}}" role="menuitemradio">
+                {{name}}
+              </a>
+            {{/each}}
+          </span>
+        </span>
+      </span>
+      <span class="post-to-community">
+        {{link 'new_post' topic_id=topic.id class='button button-secondary'}}
+      </span>
+    </div>
+
+    {{!-- Main Content  --}}
+    <div id="main-content" class="posts-list striped-list">
+      {{#each posts}}
+        <section class="posts-item fade-in-up" role="region" aria-labelledby="title-{{id}}">
+          <div class="striped-list-item {{#if featured}}post-featured{{/if}}">
+            <span class="striped-list-info">
+              <a href="{{url}}" id="title-{{id}}" class="striped-list-title"><h6>{{title}}</h6></a>
+              <span class="post-overview-item">
+                {{#if pinned}}
+                  <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
+                {{/if}}
+
+                {{#if featured}}
+                  <span class="status-label status-label-featured">{{t 'featured'}}</span>
+                {{/if}}
+
+                {{#is status 'none'}}
+                {{else}}
+                  <span class="status-label-{{status_dasherized}} status-label striped-list-status">{{status_name}}</span>
+                {{/is}}
+              </span>
+
+              <div class="meta-group">
+                {{#link 'user_profile' class="meta-data" id=author.id}}{{author.name}}{{/link}}
+                {{#if editor}}
+                  <span class="meta-data">{{date edited_at timeago=true}}</span>
+                  <span class="meta-data">{{t 'edited'}}</span>
+                {{else}}
+                  <span class="meta-data">{{date created_at timeago=true}}</span>
+                {{/if}}
+              </div>
+            </span>
+
+            <div class="post-overview-count striped-list-count">
+              <span class="striped-list-count-item">
+                <span class="striped-list-number">{{vote_sum}}</span>
+                {{t 'vote' count=vote_sum}}
+              </span>
+              <span class="striped-list-count-item">
+                <span class="striped-list-number">{{comment_count}}</span>
+                {{t 'comment' count=comment_count}}
+              </span>
+            </div>
+          </div>
+        </section>
+      {{/each}}
+    </div>
+    {{pagination}}
+  </div>
+
+  <section class="container community-footer">
+    <p class="community-footer-title fade-in-up">{{t 'suggest_new_post'}}</p>
+    <div class="fade-in-up">
+      {{link 'new_post' topic_id=topic.id class='button button-secondary'}}
+    </div>
+  </section>
+</section>
+

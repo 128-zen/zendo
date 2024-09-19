@@ -1,0 +1,182 @@
+<section class="post-list-page">
+  <h1 class="visibility-hidden">{{ t 'community'}}</h1>
+
+  {{!-- Main Content --}}
+  <section class="posts section">
+    <div class="container">
+      <header class="page-header community-header">
+        <h1 class="fade-in-up">{{t 'all_posts'}}</h1>
+        <span class="dropdown fade-in-up">
+          <button class="dropdown-toggle" aria-haspopup="true">
+            <p class="title"> 
+              {{t 'all_posts'}}
+            </p>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                <path d="M1.5 5H10.5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </button>
+          <span class="dropdown-menu" role="menu">
+            {{#link 'topics' role='menuitemradio'}}
+              {{t 'show_topics'}}
+            {{/link}}
+            {{#link 'posts' role='menuitemradio' aria-checked='true'}}
+              {{t 'show_all_posts'}}
+            {{/link}}
+          </span>
+        </span>
+      </header>
+
+      <div class="topic-header fade-in-up">
+        <span class="topic-filters">
+          <span class="dropdown">
+            <button class="dropdown-toggle" aria-haspopup="true">
+              {{current_filter.label}}
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.09554 5.707C6.08849 5.71484 6.08122 5.72252 6.07372 5.73002C5.84272 5.96102 5.46799 5.96102 5.23699 5.73002L0.648451 1.13466C0.532979 1.01908 0.475098 0.866954 0.475098 0.71666C0.475098 0.567493 0.531702 0.414155 0.649609 0.297501C0.880703 0.0676067 1.2546 0.0679752 1.48523 0.298605L5.65559 4.47459L9.86512 0.270131C10.0961 0.0392166 10.4709 0.0391598 10.7018 0.270131C10.9328 0.501129 10.9328 0.87586 10.7018 1.10686L6.09554 5.707Z" fill="#16182D"/>
+              </svg>
+            </button>
+            <span class="dropdown-menu" role="menu">
+              {{#each filters}}
+                <a href="{{url}}" aria-checked="{{selected}}" role="menuitemradio">
+                  {{name}}
+                </a>
+              {{/each}}
+            </span>
+          </span>
+          <span class="dropdown">
+            <button class="dropdown-toggle" aria-haspopup="true">
+              {{current_sorter.label}}
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.09554 5.707C6.08849 5.71484 6.08122 5.72252 6.07372 5.73002C5.84272 5.96102 5.46799 5.96102 5.23699 5.73002L0.648451 1.13466C0.532979 1.01908 0.475098 0.866954 0.475098 0.71666C0.475098 0.567493 0.531702 0.414155 0.649609 0.297501C0.880703 0.0676067 1.2546 0.0679752 1.48523 0.298605L5.65559 4.47459L9.86512 0.270131C10.0961 0.0392166 10.4709 0.0391598 10.7018 0.270131C10.9328 0.501129 10.9328 0.87586 10.7018 1.10686L6.09554 5.707Z" fill="#16182D"/>
+              </svg>
+            </button>
+            <span class="dropdown-menu" role="menu">
+              {{#each sorters}}
+                <a href="{{url}}" aria-checked="{{selected}}" role="menuitemradio">
+                  {{name}}
+                </a>
+              {{/each}}
+            </span>
+          </span>
+        </span>
+        <span class="post-to-community fade-in-up">
+          {{link 'new_post' class='button button-primary'}}
+        </span>
+      </div>
+
+      <div id="main-content" class="posts-list striped-list">
+        {{#unless posts}}
+          <div class="no-posts-with-filter">
+            {{t 'no_posts_with_filter'}}
+          </div>
+        {{/unless}}
+        {{#each posts}}
+          <section class="posts-item fade-in-up" role="region" aria-labelledby="title-{{id}}">
+            <div class="striped-list-item {{#if featured}}post-featured{{/if}}">
+              <div class="striped-list-item-top">
+                <div>
+                  <img src="{{author.avatar_url}}" alt="avatar">
+                  {{#if editor}}
+                    <span class="meta-data">{{date edited_at timeago=true}}</span>
+                    <span class="meta-data">{{t 'edited'}}</span>
+                  {{else}}
+                    <span class="meta-data">{{date created_at timeago=true}}</span>
+                  {{/if}}
+                </div>
+                <span class="post-overview-item">
+                  {{#if pinned}}
+                    <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
+                  {{/if}}
+
+                  {{#if featured}}
+                    <span class="status-label status-label-featured">{{t 'featured'}}</span>
+                  {{/if}}
+
+                  {{#is status 'none'}}
+                  {{else}}
+                    <span class="status-label-{{status_dasherized}} status-label striped-list-status">{{status_name}}</span>
+                  {{/is}}
+                </span>
+              </div>
+              <h6>
+                <a href="{{url}}" id="title-{{id}}" class="striped-list-title">{{title}}</a>
+              </h6>
+              <div class="striped-list-item-body">{{details}}</div>
+
+              <div class="post-overview-count striped-list-count">
+                <span class="striped-list-count-item">
+                  <span class="striped-list-number">{{vote_sum}}</span>
+                  {{t 'vote' count=vote_sum}}
+                </span>
+                <span class="striped-list-count-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.856445 4.82603V12.0276L4.9895 10.1076H11.535C13.7622 10.1076 15.5745 8.29532 15.5745 6.06818V4.82603C15.5745 2.5989 13.7617 0.786621 11.5341 0.786621H4.89586C2.66872 0.786621 0.856445 2.5989 0.856445 4.82603ZM6.04921 5.61402C6.04921 5.14094 5.66589 4.75762 5.19281 4.75762C4.71972 4.75762 4.3364 5.14094 4.3364 5.61402C4.3364 6.08711 4.71972 6.47043 5.19281 6.47043C5.66589 6.47043 6.04921 6.08711 6.04921 5.61402ZM8.21472 4.75762C8.68781 4.75762 9.07113 5.14094 9.07113 5.61402C9.07113 6.08711 8.68781 6.47043 8.21472 6.47043C7.74164 6.47043 7.35832 6.08711 7.35832 5.61402C7.35832 5.14094 7.74164 4.75762 8.21472 4.75762ZM12.094 5.61402C12.094 5.14094 11.7107 4.75762 11.2376 4.75762C10.7645 4.75762 10.3812 5.14094 10.3812 5.61402C10.3812 6.08711 10.7645 6.47043 11.2376 6.47043C11.7107 6.47043 12.094 6.08711 12.094 5.61402Z" fill="#FCD490"/>
+                  </svg>
+                  <span class="striped-list-number">{{comment_count}}</span>
+                </span>
+              </div>
+            </div>
+          </section>
+        {{/each}}
+      </div>
+
+      {{pagination}}
+    </div>
+    {{!-- Page Header  --}}
+
+  </section>
+
+  {{!-- Featured Posts --}}
+  {{#if featured_posts}}
+    <section class="container section community-featured-posts">
+      <h2 class="fade-in-up">{{t 'featured_posts'}}</h2>
+      <ul class="featured-posts">
+        {{#each featured_posts}}
+          <li class="featured-posts-item fade-in-up">
+            <div class="avatar post-avatar">
+              {{#if author.agent}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="icon-agent" aria-label="{{t 'team_member' name=author.name}}">
+                  <path fill="currentColor" d="M6 0C2.7 0 0 2.7 0 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm2.3 7H3.7c-.3 0-.4-.3-.3-.5C3.9 7.6 4.9 7 6 7s2.1.6 2.6 1.5c.1.2 0 .5-.3.5z"/>
+                </svg>
+              {{/if}}
+              <img src="{{author.avatar_url}}" alt="avatar" class="user-avatar"/>
+            </div>
+            <div class="post-meta">
+              <span title="{{author.name}}">
+                {{#link 'user_profile' id=author.id}}
+                  {{author.name}}
+                {{/link}}
+              </span>
+            </div>
+            <h6><a href="{{url}}">{{title}}</a></h6>
+            <div class="featured-posts-item-body">{{details}}</div>
+            <div class="featured-posts-btn">
+              <a href="{{url}}"></a>
+              {{t 'see_more'}}
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                  <path d="M1.5 5H10.5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    </section>
+  {{/if}}
+
+  {{!-- Recent activity --}}
+  <section class="community-activity activity section">
+    <div class="container fade-in-up">
+      {{#if help_center.community_enabled}}
+        {{recent_activity scope='community'}}
+      {{/if}}
+    </div>
+    <div class="container fade-in-up">
+      {{link 'new_post' class='button button-primary'}}
+    </div>
+  </section>
+
+</section>

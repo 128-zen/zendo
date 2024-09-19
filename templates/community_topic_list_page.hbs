@@ -1,0 +1,111 @@
+<section class="community-page">
+
+  {{#unless topics}}
+    <p>{{t 'no_content'}}</p>
+  {{/unless}}
+
+  {{!-- Main Content --}}
+  <div id="main-content" class="topics section">
+    <div class="container">
+      <header class="page-header community-header">
+        <h1 class="fade-in-up">{{t 'community_topics'}}</h1>
+        <span class="dropdown fade-in-up">
+          <button class="dropdown-toggle" aria-haspopup="true">
+            <p class="title">
+              {{t 'community_topics'}}
+            </p>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                <path d="M1.5 5H10.5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </button>
+          <span class="dropdown-menu" role="menu">
+            {{#link 'topics' role='menuitemradio' aria-checked='true'}}
+              {{t 'show_topics'}}
+            {{/link}}
+            {{#link 'posts' role='menuitemradio'}}
+              {{t 'show_all_posts'}}
+            {{/link}}
+          </span>
+        </span>
+      </header>
+      <ul class="blocks-list topics-list">
+        {{#each topics}}
+          <li class="fade-in-up topics-item {{#if internal}}blocks-item-internal{{/if}}">
+            <h5>
+              <a href="{{url}}" class="blocks-item-title">
+                {{name}}
+                {{#if internal}}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-lock" title="{{t 'internal'}}">
+                    <rect width="12" height="9" x="2" y="7" fill="currentColor" rx="1" ry="1"/>
+                    <path fill="none" stroke="currentColor" d="M4.5 7.5V4a3.5 3.5 0 017 0v3.5"/>
+                  </svg>
+                {{/if}}
+              </a>
+            </h5>
+
+            <span class="blocks-item-description">{{excerpt description}}</span>
+            <ul class="meta-group">
+              <li class="meta-data">{{t 'post_count' count=post_count}}</li>
+              <li class="meta-data">{{t 'follower_count' count=follower_count}}</li>
+            </ul>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+
+  {{pagination}}
+
+  {{!-- Featured Posts --}}
+  {{#if featured_posts}}
+    <section class="container section community-featured-posts">
+      <h2 class="fade-in-up">{{t 'featured_posts'}}</h2>
+      <ul class="featured-posts">
+        {{#each featured_posts}}
+          <li class="featured-posts-item fade-in-up">
+            <div class="avatar post-avatar">
+              {{#if author.agent}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="icon-agent" aria-label="{{t 'team_member' name=author.name}}">
+                  <path fill="currentColor" d="M6 0C2.7 0 0 2.7 0 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm2.3 7H3.7c-.3 0-.4-.3-.3-.5C3.9 7.6 4.9 7 6 7s2.1.6 2.6 1.5c.1.2 0 .5-.3.5z"/>
+                </svg>
+              {{/if}}
+              <img src="{{author.avatar_url}}" alt="avatar" class="user-avatar"/>
+            </div>
+            <div class="post-meta">
+              <span title="{{author.name}}">
+                {{#link 'user_profile' id=author.id}}
+                  {{author.name}}
+                {{/link}}
+              </span>
+            </div>
+            <h6><a href="{{url}}">{{title}}</a></h6>
+            <div class="featured-posts-item-body">{{details}}</div>
+            <div class="featured-posts-btn">
+              <a href="{{url}}"></a>
+              {{t 'see_more'}}
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                  <path d="M1.5 5H10.5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    </section>
+  {{/if}}
+
+  {{!-- Recent activity --}}
+  <section class="community-activity activity section">
+    <div class="container fade-in-up">
+      {{#if help_center.community_enabled}}
+        {{recent_activity scope='community'}}
+      {{/if}}
+    </div>
+    <div class="container fade-in-up">
+      {{link 'new_post' class='button button-secondary'}}
+    </div>
+  </section>
+</section>

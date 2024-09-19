@@ -1,0 +1,55 @@
+<div class="section-page section">
+  <div class="container">
+
+    {{!-- Sidebar --}}
+    <nav class="section-page__nav nav fade-in-up">
+      <div class="search-container">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+          <path d="M15.49 14.645L12.24 11.395H12.205C13.2068 10.2139 13.713 8.69119 13.6178 7.1454C13.5226 5.59961 12.8334 4.15049 11.6943 3.10119C10.5553 2.05189 9.05456 1.48368 7.50616 1.51542C5.95777 1.54717 4.48162 2.17641 3.38651 3.27152C2.2914 4.36663 1.66216 5.84278 1.63041 7.39117C1.59867 8.93957 2.16688 10.4403 3.21618 11.5793C4.26548 12.7184 5.7146 13.4076 7.26039 13.5028C8.80618 13.598 10.3289 13.0918 11.51 12.09C11.51 12.09 11.51 12.115 11.51 12.125L14.76 15.375C14.8065 15.4219 14.8618 15.4591 14.9227 15.4845C14.9837 15.5099 15.049 15.5229 15.115 15.5229C15.181 15.5229 15.2464 15.5099 15.3073 15.4845C15.3683 15.4591 15.4236 15.4219 15.47 15.375C15.5213 15.3297 15.5627 15.2742 15.5917 15.2122C15.6206 15.1502 15.6365 15.0828 15.6384 15.0144C15.6403 14.9459 15.6281 14.8778 15.6026 14.8143C15.577 14.7508 15.5387 14.6932 15.49 14.645ZM7.63504 12.5C6.64613 12.5 5.67943 12.2068 4.85719 11.6574C4.03494 11.108 3.39408 10.3271 3.01564 9.41346C2.6372 8.49983 2.53818 7.4945 2.73111 6.5246C2.92404 5.55469 3.40024 4.66378 4.0995 3.96451C4.79877 3.26525 5.68968 2.78905 6.65959 2.59612C7.62949 2.40319 8.63482 2.50221 9.54845 2.88065C10.4621 3.25909 11.243 3.89995 11.7924 4.7222C12.3418 5.54444 12.635 6.51114 12.635 7.50005C12.635 8.15666 12.5057 8.80684 12.2544 9.41346C12.0032 10.0201 11.6349 10.5713 11.1706 11.0356C10.7063 11.4999 10.1551 11.8682 9.54845 12.1194C8.94183 12.3707 8.29165 12.5 7.63504 12.5Z" fill="#686B71"/>
+        </svg>
+        {{search scoped=settings.scoped_kb_search submit=false}}
+      </div>
+      <div class="nav__list">
+
+      </div>
+    </nav>
+
+    {{!-- Main Content --}}
+    <section class="section-page__content">
+      <div class="section-page__heading">
+        <h1 class="fade-in-up">{{section.name}}</h1>
+        {{#if settings.show_follow_section}}
+          <div class="section-subscribe fade-in-up">{{subscribe}}</div>
+        {{/if}}
+      </div>
+      {{#if section.description}}
+          <p class="fade-in-up">{{section.description}}</p>
+      {{/if}}
+
+      {{#if section.articles}}
+        <ul class="section-page__articles">
+          {{#each section.articles}}
+            <li class="fade-in-up">
+              <div class="section-page__article">
+                <h6><a href="{{url}}">{{title}}</a></h6>
+                <div>{{body}}</div>
+                <div>
+                  <a href="{{url}}"></a>
+                  {{t 'see_more'}}
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                      <path d="M1.5 5H10.5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+          {{/each}}
+        </ul>
+      {{else}}
+      {{/if}}
+
+    </section>
+  </div>
+
+</div>
