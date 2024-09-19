@@ -258,6 +258,7 @@ h6 {
   font-size: 55px;
   letter-spacing: -1.65px;
   margin-bottom: 40px;
+  color: $text_secondary;
 }
 
 h1 {
@@ -1008,7 +1009,7 @@ ul {
 }
 .user-info > button {
   border: 0;
-  color: $text_primary;
+  color: $text_secondary;
   min-width: 0;
   padding: 0;
   white-space: nowrap;
@@ -1018,7 +1019,7 @@ ul {
   background-color: transparent;
 }
 .user-info > button path {
-  stroke: $text_primary;
+  stroke: $text_secondary;
 }
 .user-info > button:hover path, .user-info > button:focus path {
   stroke: $hover_link_color;
@@ -1443,6 +1444,7 @@ ul {
   font-size: 20px;
   margin-bottom: 60px;
   max-width: 645px;
+  color: $text_secondary;
 }
 
 .hero > svg {
@@ -1539,6 +1541,7 @@ ul {
   margin-bottom: 0;
   font-size: 16px;
   max-width: 40%;
+  color: $text_secondary;
 }
 .popular-keywords__items {
   display: flex;
@@ -1552,7 +1555,7 @@ ul {
   font-weight: 400;
   line-height: 140%;
   padding: 4px 8px;
-  border-radius: 8px;
+  border-radius: 50px;
   border: 1px solid $border_color;
   color: $text_secondary;
 }
