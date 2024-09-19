@@ -1082,42 +1082,24 @@ ul {
   border-radius: 10px;
   padding: 80px 120px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 60px;
   background-color: $background_primary_color;
 }
 
-.submit-request .container div, .submit-request h2, .submit-request p {
-  position: relative;
+.submit-request .container div {
   z-index: 4;
 }
 
-.submit-request svg {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-.submit-request svg path {
-  fill: $background_primary_color;
-  stroke: $background_tertiary_color;
-}
-
-.submit-request svg:last-child {
-  position: absolute;
-  left: auto;
-  right: 0;
-  bottom: 0;
-}
-
 .submit-request h2 {
-  margin-bottom: 20px;
+  color: $text_secondary;
 }
 
 .submit-request p {
   font-size: 18px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  color: $body_secondary;
 }
 
 @media (max-width: 1279px) {
@@ -1192,7 +1174,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   max-width: 1170px;
-  padding: 30px 0;
+  padding: 60px 0 30px;
 }
 
 .footer__bottom a {
