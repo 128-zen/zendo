@@ -2037,6 +2037,7 @@ ul {
 /* Resources */
 .resources {
   position: relative;
+  overflow: hidden;
 }
 
 .resources > svg {
@@ -2601,13 +2602,17 @@ ul {
 /* Find Solution */
 .find-solution {
   position: relative;
-  padding-top: 120px;
+  padding: 120px 0 280px;
+  overflow: hidden;
   background-color: $background_secondary_color;
 }
 
 .find-solution > svg {
   position: absolute;
   z-index: 1;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .find-solution .container {
@@ -2652,7 +2657,16 @@ ul {
   margin-bottom: 12px;
 }
 
+@media (max-width: 1279px) {
+  .find-solution {
+    padding: 100px 0 260px;
+  }
+}
+
 @media (max-width: 1023px) {
+  .find-solution {
+    padding: 80px 0 240px;
+  }
   .find-solution__items {
     margin-top: 40px;
   }
@@ -2661,6 +2675,9 @@ ul {
   }
 }
 @media (max-width: 767px) {
+  .find-solution {
+    padding: 60px 0 220px;
+  }
   .find-solution__items {
     gap: 20px;
   }
