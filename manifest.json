@@ -1,7 +1,7 @@
 {
   "name": "Zendo 128",
   "author": "128zen",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -677,6 +677,39 @@
           "description": "Show categories section layout 2 subtitle",
           "label": "Toggle Layout 2 Subtitle",
           "value": true
+        }
+      ]
+    },
+    {
+      "label": "Homepage Promoted Articles Section",
+      "variables": [
+        {
+          "identifier": "show_fourth_section",
+          "type": "checkbox",
+          "description": "Show section",
+          "label": "Toggle Section",
+          "value": true
+        },
+        {
+          "identifier": "fourth_section_heading",
+          "type": "text",
+          "description": "Enter section heading",
+          "label": "Section Heading",
+          "value": "Promoted articles"
+        },       
+        {
+          "identifier": "fourth_section_button",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Section Button Text",
+          "value": "View all"
+        },
+        {
+          "identifier": "fourth_section_button_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Section Button Link",
+          "value": "#"
         }
       ]
     },
