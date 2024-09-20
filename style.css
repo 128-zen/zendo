@@ -2426,12 +2426,10 @@ ul {
 .faq__items {
   display: flex;
   gap: 30px;
-  flex-wrap: wrap;
-  background-color: $background_primary_color;
 }
 
 .faq__item {
-  width: calc(50% - 15px);
+  width: 100%;
   cursor: pointer;
   padding: 30px;
   border-radius: 10px;
@@ -2440,50 +2438,31 @@ ul {
 }
 
 .faq__item h5 {
+  position: relative;
+  padding-right: 20px;
   transition: all .3s ease;
 }
 
 .faq__item:hover h5 {
+  margin-bottom: 12px;
   color: $hover_link_color;
 }
 
-.faq__item div {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: space-between;
+.faq__item h5::after {
+  content: '+';
+  position: absolute;
+  line-height: 1.1;
+  right: 0;
+  transition: transform 0.3s ease-in-out;
 }
 
-.faq__item span {
-  font-size: 0;
-  padding: 10px 9px;
-  border-radius: 15px;
-  border: 1px solid $primary_button_color;
+.faq__item.open h5::after {
+  content: '-';
+  transform: rotate(180deg);
 }
 
 .faq__item:last-child {
   margin-bottom: 0;
-}
-
-.faq__item.open div {
-  margin-bottom: 20px;
-}
-
-.faq__item.open span {
-  background-color: $primary_button_color;
-  border: 1px solid $primary_button_color;
-}
-
-.faq__item.open svg {
-  transform: rotate(90deg);
-}
-
-.faq__item svg path {
-  stroke: $text_primary;
-}
-
-.faq__item.open svg path {
-  stroke: $text_secondary;
 }
 
 .faq__item p {
