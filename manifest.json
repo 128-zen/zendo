@@ -1,7 +1,7 @@
 {
   "name": "Zendo 128",
   "author": "128zen",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -630,6 +630,180 @@
           "description": "Insert link",
           "label": "Item 2 Link",
           "value": "#"
+        }
+      ]
+    },
+    {
+      "label": "Homepage Resources Section",
+      "variables": [
+        {
+          "identifier": "show_resources_section",
+          "type": "checkbox",
+          "description": "Show section",
+          "label": "Toggle Section",
+          "value": true
+        },
+        {
+          "identifier": "resources_item1_img",
+          "type": "file",
+          "description": "Insert image",
+          "label": "Item 1 Image"
+        },
+        {
+          "identifier": "resources_item1_heading",
+          "type": "text",
+          "description": "Enter section heading",
+          "label": "Item 1 Heading",
+          "value": "Video tutorials"
+        },
+        {
+          "identifier": "resources_item1_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Item 1 Link",
+          "value": "#"
+        },
+        {
+          "identifier": "resources_item1_text",
+          "type": "text",
+          "description": "Enter section subtitle",
+          "label": "Item 1 Subtitle",
+          "value": "Comprehensive guides, tutorials, and references to help you navigate our products/services seamlessly."
+        },
+        {
+          "identifier": "resources_item2_img",
+          "type": "file",
+          "description": "Insert image",
+          "label": "Item 2 Image"
+        },
+        {
+          "identifier": "resources_item2_heading",
+          "type": "text",
+          "description": "Enter section heading",
+          "label": "Item 2 Heading",
+          "value": "Campaigns"
+        },
+        {
+          "identifier": "resources_item2_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Item 2 Link",
+          "value": "#"
+        },
+        {
+          "identifier": "resources_item2_text",
+          "type": "text",
+          "description": "Enter section subtitle",
+          "label": "Item 2 Subtitle",
+          "value": "Comprehensive guides, tutorials, and references to help you navigate our products/services seamlessly."
+        },
+        {
+          "identifier": "resources_item3_img",
+          "type": "file",
+          "description": "Insert image",
+          "label": "Item 3 Image"
+        },
+        {
+          "identifier": "resources_item3_heading",
+          "type": "text",
+          "description": "Enter section heading",
+          "label": "Item 3 Heading",
+          "value": "Organizing your data"
+        },
+        {
+          "identifier": "resources_item3_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Item 3 Link",
+          "value": "#"
+        },
+        {
+          "identifier": "resources_item3_text",
+          "type": "text",
+          "description": "Enter section subtitle",
+          "label": "Item 3 Subtitle",
+          "value": "Comprehensive guides, tutorials, and references to help you navigate our products/services seamlessly."
+        },
+        {
+          "identifier": "resources_item4_img",
+          "type": "file",
+          "description": "Insert image",
+          "label": "Item 4 Image"
+        },
+        {
+          "identifier": "resources_item4_heading",
+          "type": "text",
+          "description": "Enter section heading",
+          "label": "Item 4 Heading",
+          "value": "Account settings"
+        },
+        {
+          "identifier": "resources_item4_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Item 4 Link",
+          "value": "#"
+        },
+        {
+          "identifier": "resources_item4_text",
+          "type": "text",
+          "description": "Enter section subtitle",
+          "label": "Item 4 Subtitle",
+          "value": "Comprehensive guides, tutorials, and references to help you navigate our products/services seamlessly."
+        },
+        {
+          "identifier": "resources_item5_img",
+          "type": "file",
+          "description": "Insert image",
+          "label": "Item 5 Image"
+        },
+        {
+          "identifier": "resources_item5_heading",
+          "type": "text",
+          "description": "Enter section heading",
+          "label": "Item 5 Heading",
+          "value": "Features"
+        },
+        {
+          "identifier": "resources_item5_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Item 5 Link",
+          "value": "#"
+        },
+        {
+          "identifier": "resources_item5_text",
+          "type": "text",
+          "description": "Enter section subtitle",
+          "label": "Item 5 Subtitle",
+          "value": "Comprehensive guides, tutorials, and references to help you navigate our products/services seamlessly."
+        },
+        {
+          "identifier": "resources_item6_img",
+          "type": "file",
+          "description": "Insert image",
+          "label": "Item 6 Image"
+        },
+        {
+          "identifier": "resources_item6_heading",
+          "type": "text",
+          "description": "Enter section heading",
+          "label": "Item 6 Heading",
+          "value": "Getting started"
+        },
+        {
+          "identifier": "resources_item6_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Item 6 Link",
+          "value": "#"
+        },
+        {
+          "identifier": "resources_item6_text",
+          "type": "text",
+          "description": "Enter section subtitle",
+          "label": "Item 6 Subtitle",
+          "value": "Comprehensive guides, tutorials, and references to help you navigate our products/services seamlessly."
         }
       ]
     },
