@@ -1920,7 +1920,9 @@ ul {
 }
 
 /* Quick Links */
-
+.quick-links {
+  padding-top: 120px;
+}
 
 .quick-links h2 {
   margin-bottom: 20px;
@@ -1956,8 +1958,12 @@ ul {
   background-color: $background_primary_color;
 }
 
-.quick-links__item:first-of-type h4, .quick-links__item:first-of-type p, .quick-links__item:first-of-type div div {
+.quick-links__item:first-of-type h4 a, .quick-links__item:first-of-type p, .quick-links__item:first-of-type div div {
   color: $text_secondary;
+}
+
+.quick-links__item:first-of-type h4 a:hover {
+  color: $hover_link_color;
 }
 
 .quick-links__item img {
@@ -2006,12 +2012,24 @@ ul {
   transform: rotate(45deg);
 }
 
+@media (max-width: 1279px) {
+  .quick-links {
+    padding-top: 100px;
+  }
+}
+
 @media (max-width: 1023px) {
+  .quick-links {
+    padding-top: 80px;
+  }
   .quick-links__items {
     margin-top: 40px;
   }
 }
 @media (max-width: 767px) {
+  .quick-links {
+    padding-top: 60px;
+  }
   .quick-links__items {
     gap: 20px;
   }
@@ -2022,6 +2040,10 @@ ul {
 }
 
 /* Explore Topics */
+.categories {
+  padding-top: 120px;
+  background-color: $background_secondary_color;
+}
 
 .categories .container {
   display: flex;
@@ -2056,11 +2078,6 @@ ul {
   flex: 0 0 auto;
 }
 
-.categories__head .button-primary {
-  color: $text_primary;
-  background-color: $secondary_button_color;
-}
-
 .categories__sections, .categories__list {
   margin-top: 60px;
   display: flex;
@@ -2078,9 +2095,9 @@ ul {
   justify-content: space-between;
   width: calc(33.3% - 20px);
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 10px;
   gap: 40px;
-  background-color: $background_primary_color;
+  background-color: $background_quaternary_color;
 }
 
 .categories__section > a {
@@ -2123,7 +2140,16 @@ ul {
   display: none;
 }
 
+@media (max-width: 1279px) {
+  .categories {
+    padding-top: 100px;
+  }
+}
+
 @media (max-width: 1023px) {
+  .categories {
+    padding-top: 80px;
+  }
   .categories > svg {
     display: none;
   }
@@ -2143,6 +2169,9 @@ ul {
   }
 }
 @media (max-width: 767px) {
+  .categories {
+    padding-top: 60px;
+  }
   .categories__sections, .categories__list {
     gap: 20px;
   }
