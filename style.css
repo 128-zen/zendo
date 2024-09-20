@@ -1871,10 +1871,17 @@ ul {
 }
 
 .introduction__item h5 {
+  position: relative;
   margin: 20px 0 14px;
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.introduction__item h5 a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .introduction__item h5 svg {
@@ -1889,7 +1896,7 @@ ul {
   stroke: $hover_link_color;
 }
 
-.introduction__item h5:hover a {
+.introduction__item h5:hover {
   color: $hover_link_color;
 }
 
@@ -1909,6 +1916,98 @@ ul {
   .introduction__item {
     max-width: 370px;
     width: 100%;
+  }
+}
+
+/* Find Solution */
+
+
+.quick-links h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.quick-links .container > p {
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.quick-links__items {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.quick-links__item {
+  position: relative;
+  width: calc(50% - 15px);
+  padding: 30px;
+  text-align: left;
+  align-items: center;
+  background-color: $background_secondary_color;
+}
+
+.quick-links__item img {
+  flex: 0 0 auto;
+  max-width: 80px;
+}
+
+.quick-links__item h4 {
+  margin-bottom: 20px;
+}
+
+.quick-links__item p {
+  margin-bottom: 30px;
+}
+
+.quick-links__item div {
+  display: flex;
+  gap: 30px;
+}
+
+.quick-links__item div div a {
+  position: absolute;
+  font-size: 18px;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.quick-links__item div div {
+  position: relative;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  width: fit-content;
+}
+
+.quick-links__item div svg path {
+  stroke: $text_primary;
+}
+
+.quick-links__item div div:hover svg {
+  transform: rotate(45deg);
+}
+
+
+
+@media (max-width: 1023px) {
+  .quick-links__items {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .quick-links__items {
+    gap: 20px;
+  }
+  .quick-links__item {
+    width: 100%;
+    max-width: 470px;
   }
 }
 

@@ -31,7 +31,8 @@
             <img src="{{settings.introduction_item1_img}}" alt="icon">
           </div>
           <h5>
-            <a href="{{settings.introduction_item1_link}}">{{settings.introduction_item1_heading}}</a>
+            {{settings.introduction_item1_heading}}
+            <a href="{{settings.introduction_item1_link}}"></a>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
               <path d="M17.5 15.5053V8.25M17.5 8.25H10.2447M17.5 8.25L6.5 19.25" stroke="#1B1641" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -43,7 +44,8 @@
             <img src="{{settings.introduction_item2_img}}" alt="icon">
           </div>
           <h5>
-            <a href="{{settings.introduction_item2_link}}">{{settings.introduction_item2_heading}}</a>
+            {{settings.introduction_item2_heading}}
+            <a href="{{settings.introduction_item2_link}}"></a>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
               <path d="M17.5 15.5053V8.25M17.5 8.25H10.2447M17.5 8.25L6.5 19.25" stroke="#1B1641" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -55,7 +57,8 @@
             <img src="{{settings.introduction_item3_img}}" alt="icon">
           </div>
           <h5>
-            <a href="{{settings.introduction_item3_link}}">{{settings.introduction_item3_heading}}</a>
+            {{settings.introduction_item3_heading}}
+            <a href="{{settings.introduction_item3_link}}"></a>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
               <path d="M17.5 15.5053V8.25M17.5 8.25H10.2447M17.5 8.25L6.5 19.25" stroke="#1B1641" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -140,7 +143,45 @@
   </svg>
 </section>
 
-
+{{#if settings.show_find_solution_section}}
+{{!-- Quick Links Section --}}
+<section class="quick-links section">
+  <div class="container">
+    <h2>{{settings.quick_links_heading}}</h2>
+    <p>{{settings.quick_links_subtitle}}</p>
+    <div class="quick-links__items">
+      <div class="quick-links__item fade-in-up">
+        <img src="{{settings.quick_links_item1_img}}" alt="icon">
+        <div>
+          <h4><a href="{{settings.quick_links_item1_link}}">{{settings.quick_links_item1_heading}}</a></h4>
+          <p>{{settings.quick_links_item1_text}}</p>
+          <div>
+            <a href="{{settings.quick_links_item1_link}}"></a>
+            {{settings.quick_links_item1_link_text}}
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+              <path d="M1.5 5H10.5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="quick-links__item fade-in-up">
+        <img src="{{settings.quick_links_item2_img}}" alt="icon">
+        <div>
+          <h4><a href="{{settings.quick_links_item2_link}}">{{settings.quick_links_item2_heading}}</a></h4>
+          <p>{{settings.find_solution_item2_text}}</p>
+          <div>
+            <a href="{{settings.quick_links_item2_link}}"></a>
+            {{settings.quick_links_item2_link_text}}
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+              <path d="M1.5 5H10.5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{/if}}
 
 {{#if settings.show_category1_section}}
 {{!-- Categories Section --}}
