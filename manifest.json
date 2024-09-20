@@ -1,7 +1,7 @@
 {
   "name": "Zendo 128",
   "author": "128zen",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -758,20 +758,6 @@
           "value": "#"
         },
         {
-          "identifier": "videos_heading1",
-          "type": "text",
-          "description": "Enter heading",
-          "label": "Item 1 Heading",
-          "value": "Video tutorials"
-        },
-        {
-          "identifier": "videos_description1",
-          "type": "text",
-          "description": "Enter description",
-          "label": "Item 1 Description",
-          "value": "Comprehensive guides, tutorials, and references to help you navigate our products/services seamlessly."
-        },
-        {
           "identifier": "videos_img2",
           "type": "file",
           "description": "Choose image",
@@ -783,20 +769,6 @@
           "description": "Insert link",
           "label": "Item 2 Link",
           "value": "#"
-        },
-        {
-          "identifier": "videos_heading2",
-          "type": "text",
-          "description": "Enter heading",
-          "label": "Item 2 Heading",
-          "value": "Video tutorials"
-        },
-        {
-          "identifier": "videos_description2",
-          "type": "text",
-          "description": "Enter description",
-          "label": "Item 2 Description",
-          "value": "Comprehensive guides, tutorials, and references to help you navigate our products/services seamlessly."
         },
         {
           "identifier": "videos_img3",
@@ -812,18 +784,43 @@
           "value": "#"
         },
         {
-          "identifier": "videos_heading3",
-          "type": "text",
-          "description": "Enter heading",
-          "label": "Item 3 Heading",
-          "value": "Video tutorials"
+          "identifier": "videos_img4",
+          "type": "file",
+          "description": "Choose image",
+          "label": "Item 4 Image"
         },
         {
-          "identifier": "videos_description3",
+          "identifier": "videos_link4",
           "type": "text",
-          "description": "Enter description",
-          "label": "Item 3 Description",
-          "value": "Comprehensive guides, tutorials, and references to help you navigate our products/services seamlessly."
+          "description": "Insert link",
+          "label": "Item 4 Link",
+          "value": "#"
+        },
+        {
+          "identifier": "videos_img5",
+          "type": "file",
+          "description": "Choose image",
+          "label": "Item 5 Image"
+        },
+        {
+          "identifier": "videos_link5",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Item 5 Link",
+          "value": "#"
+        },
+        {
+          "identifier": "videos_img6",
+          "type": "file",
+          "description": "Choose image",
+          "label": "Item 6 Image"
+        },
+        {
+          "identifier": "videos_link6",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Item 6 Link",
+          "value": "#"
         }
       ]
     },

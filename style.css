@@ -2276,8 +2276,10 @@ ul {
 
 /* VIDEOS */
 
-.videos{
+.videos {
+  padding-top: 120px;
   text-align: center;
+  background-color: $background_secondary_color;
 }
 
 .videos__head {
@@ -2286,11 +2288,6 @@ ul {
   align-items: center;
   gap: 30px;
   text-align: left;
-}
-
-.videos__head .button-primary {
-  color: $text_primary;
-  background-color: $secondary_button_color;
 }
 
 .videos__list{
@@ -2314,10 +2311,9 @@ ul {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  margin-bottom: 30px;
   z-index: 2;
-  height: 277px;
-  border-radius: 6px;
+  height: 200px;
+  border-radius: 20px;
   transition: all .3s ease;
 }
 
@@ -2335,34 +2331,24 @@ ul {
   cursor: pointer;
 }
 
-.videos__item h4 {
-  display: inline-block;
-  cursor: pointer;
-  margin-bottom: 20px;
-  transition: all .3s ease;
+
+.videos__item rect {
+  fill: $background_quaternary_color;
 }
 
-.videos__item h4:hover {
-  color: $hover_link_color;
+.videos__img path {
+  fill: $text_primary;
 }
 
-.videos__item circle{
-  fill: $primary_button_color;
-}
-
-.videos__img path{
-  fill: $text_secondary;
-}
-
-.videos__img:hover{
+.videos__img:hover {
   opacity: .8;
 }
 
-.videos__img:hover circle{
-  fill: $background_secondary_color;
+.videos__img:hover rect {
+  fill: $primary_button_color;
 }
 
-.videos__img:hover path{
+.videos__img:hover path {
   fill: $text_secondary;
 }
 
@@ -2390,7 +2376,16 @@ ul {
   color: #fff;
 }
 
-@media (max-width: 1023px){
+@media (max-width: 1279px) {
+  .videos {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .videos {
+    padding-top: 80px;
+  }
   .videos__list {
     margin-top: 40px;
   }
@@ -2399,7 +2394,10 @@ ul {
   }
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
+  .videos {
+    padding-top: 60px;
+  }
   .videos__head {
     flex-direction: column;
     gap: 20px;
