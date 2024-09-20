@@ -1451,6 +1451,7 @@ ul {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 1;
 }
 
 .hero > svg:nth-of-type(2) {
@@ -1821,6 +1822,8 @@ ul {
 
 /* Introduction */
 .introduction {
+  position: relative;
+  z-index: 2;
   margin-top: 80px;
 }
 
@@ -1874,6 +1877,10 @@ ul {
   gap: 10px;
 }
 
+.introduction__item h5 svg {
+  flex: 0 0 auto;
+}
+
 .introduction__item h5:hover svg {
   transform: rotate(45deg);
 }
@@ -1882,16 +1889,20 @@ ul {
   stroke: $hover_link_color;
 }
 
+.introduction__item h5:hover a {
+  color: $hover_link_color;
+}
+
 @media (max-width: 1023px) {
-  .introduction__items {
-    gap: 30px;
-  }
   .introduction__item {
     width: calc(50% - 15px);
   }
 }
 
 @media (max-width: 767px) {
+  .introduction {
+    margin-top: 60px;
+  }
   .introduction__items {
     gap: 20px;
   }
