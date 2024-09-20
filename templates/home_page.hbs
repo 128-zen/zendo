@@ -21,32 +21,54 @@
       {{/if}}
     </div>
   </div>
-</section>
-
-{{#if settings.show_introduction_section}}
-{{!-- Introduction Section --}}
-<section class="introduction section">
-  <div class="container">
-    <div class="introduction__items">
-      <div class="introduction__item fade-in-up">
-        <img src="{{settings.introduction_item1_img}}" alt="icon">
-        <h5><a href="{{settings.introduction_item1_link}}">{{settings.introduction_item1_heading}}</a></h5>
-        <p>{{settings.introduction_item1_subtitle}}</p>
-      </div>
-      <div class="introduction__item fade-in-up">
-        <img src="{{settings.introduction_item2_img}}" alt="icon">
-        <h5><a href="{{settings.introduction_item2_link}}">{{settings.introduction_item2_heading}}</a></h5>
-        <p>{{settings.introduction_item2_subtitle}}</p>
-      </div>
-      <div class="introduction__item fade-in-up">
-        <img src="{{settings.introduction_item3_img}}" alt="icon">
-        <h5><a href="{{settings.introduction_item3_link}}">{{settings.introduction_item3_heading}}</a></h5>
-        <p>{{settings.introduction_item3_subtitle}}</p>
+  {{#if settings.show_introduction_section}}
+  {{!-- Introduction Section --}}
+  <div class="introduction section">
+    <div class="container">
+      <div class="introduction__items">
+        <div class="introduction__item fade-in-up">
+          <div>
+            <img src="{{settings.introduction_item1_img}}" alt="icon">
+          </div>
+          <h5>
+            <a href="{{settings.introduction_item1_link}}">{{settings.introduction_item1_heading}}</a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+              <path d="M17.5 15.5053V8.25M17.5 8.25H10.2447M17.5 8.25L6.5 19.25" stroke="#1B1641" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </h5>
+          <p>{{settings.introduction_item1_subtitle}}</p>
+        </div>
+        <div class="introduction__item fade-in-up">
+          <div>
+            <img src="{{settings.introduction_item2_img}}" alt="icon">
+          </div>
+          <h5>
+            <a href="{{settings.introduction_item2_link}}">{{settings.introduction_item2_heading}}</a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+              <path d="M17.5 15.5053V8.25M17.5 8.25H10.2447M17.5 8.25L6.5 19.25" stroke="#1B1641" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </h5>
+          <p>{{settings.introduction_item2_subtitle}}</p>
+        </div>
+        <div class="introduction__item fade-in-up">
+          <div>
+            <img src="{{settings.introduction_item3_img}}" alt="icon">
+          </div>
+          <h5>
+            <a href="{{settings.introduction_item3_link}}">{{settings.introduction_item3_heading}}</a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+              <path d="M17.5 15.5053V8.25M17.5 8.25H10.2447M17.5 8.25L6.5 19.25" stroke="#1B1641" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </h5>
+          <p>{{settings.introduction_item3_subtitle}}</p>
+        </div>
       </div>
     </div>
   </div>
+  {{/if}}
 </section>
-{{/if}}
+
+
 
 {{#if settings.show_category1_section}}
 {{!-- Categories Section --}}

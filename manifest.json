@@ -1,7 +1,7 @@
 {
   "name": "Zendo 128",
   "author": "128zen",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -463,6 +463,13 @@
           "value": "Discover everything you need to know to start your journey"
         },
         {
+          "identifier": "border_color_item1",
+          "type": "color",
+          "description": "Choose the color for border item 1",
+          "label": "Item 1 Border Color",
+          "value": "#EB5861"
+        },
+        {
           "identifier": "introduction_item2_img",
           "type": "file",
           "description": "Insert image",
@@ -490,6 +497,13 @@
           "value": "Discover everything you need to know to start your journey"
         },
         {
+          "identifier": "border_color_item2",
+          "type": "color",
+          "description": "Choose the color for border item 2",
+          "label": "Item 2 Border Color",
+          "value": "#FFD494"
+        },
+        {
           "identifier": "introduction_item3_img",
           "type": "file",
           "description": "Insert image",
@@ -515,6 +529,13 @@
           "description": "Enter section subtitle",
           "label": "Item 3 Subtitle",
           "value": "Discover everything you need to know to start your journey"
+        },
+        {
+          "identifier": "border_color_item3",
+          "type": "color",
+          "description": "Choose the color for border item 3",
+          "label": "Item 3 Border Color",
+          "value": "#6658EB"
         }
       ]
     },
