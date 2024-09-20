@@ -2599,6 +2599,21 @@ ul {
 
 
 /* Find Solution */
+.find-solution {
+  position: relative;
+  padding-top: 120px;
+  background-color: $background_secondary_color;
+}
+
+.find-solution > svg {
+  position: absolute;
+  z-index: 1;
+}
+
+.find-solution .container {
+  position: relative;
+  z-index: 2;
+}
 
 .find-solution h2 {
   margin-bottom: 20px;
@@ -2622,41 +2637,20 @@ ul {
 .find-solution__item {
   width: calc(33.3% - 20px);
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 10px;
   text-align: left;
-  align-items: center;
-  text-align: center;
-  background-color: $background_secondary_color;
+  background-color: $background_quaternary_color;
 }
 
-.find-solution__head {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-bottom: 18px;
-  flex-direction: column;
+.find-solution__item img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
 }
 
-.find-solution__head div {
-  font-size: 0;
-  border-radius: 50px;
-  padding: 15px;
-  background-color: $primary_button_color;
+.find-solution__item h5 {
+  margin-bottom: 12px;
 }
-
-.find-solution__head img {
-  width: 30px;
-  height: 30px;
-}
-
-.find-solution__item a, .find-solution__item p {
-  color: $text_secondary;
-}
-
-.find-solution__item a:hover {
-  color: $hover_link_color;
-}
-
 
 @media (max-width: 1023px) {
   .find-solution__items {
