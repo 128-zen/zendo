@@ -1919,7 +1919,7 @@ ul {
   }
 }
 
-/* Find Solution */
+/* Quick Links */
 
 
 .quick-links h2 {
@@ -1944,15 +1944,26 @@ ul {
 .quick-links__item {
   position: relative;
   width: calc(50% - 15px);
+  display: flex;
+  gap: 40px;
+  border-radius: 10px;
   padding: 30px;
   text-align: left;
-  align-items: center;
-  background-color: $background_secondary_color;
+  background-color: $background_tertiary_color;
+}
+
+.quick-links__item:first-of-type {
+  background-color: $background_primary_color;
+}
+
+.quick-links__item:first-of-type h4, .quick-links__item:first-of-type p, .quick-links__item:first-of-type div div {
+  color: $text_secondary;
 }
 
 .quick-links__item img {
   flex: 0 0 auto;
   max-width: 80px;
+  height: fit-content;
 }
 
 .quick-links__item h4 {
@@ -1963,10 +1974,6 @@ ul {
   margin-bottom: 30px;
 }
 
-.quick-links__item div {
-  display: flex;
-  gap: 30px;
-}
 
 .quick-links__item div div a {
   position: absolute;
@@ -1981,20 +1988,23 @@ ul {
 .quick-links__item div div {
   position: relative;
   display: flex;
-  gap: 15px;
+  gap: 10px;
   align-items: center;
   width: fit-content;
+  font-size: 14px;
 }
 
 .quick-links__item div svg path {
   stroke: $text_primary;
 }
 
+.quick-links__item:first-of-type div svg path {
+  stroke: $text_secondary;
+}
+
 .quick-links__item div div:hover svg {
   transform: rotate(45deg);
 }
-
-
 
 @media (max-width: 1023px) {
   .quick-links__items {
