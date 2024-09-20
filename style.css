@@ -59,7 +59,7 @@ a:hover {
   color: $hover_link_color;
 }
 
-path, svg, button, g, circle {
+path, svg, button, g, circle, rect {
   transition: all .3s ease;
 }
 
@@ -2313,7 +2313,7 @@ ul {
   cursor: pointer;
   z-index: 2;
   height: 200px;
-  border-radius: 20px;
+  border-radius: 10px;
   transition: all .3s ease;
 }
 
@@ -2409,6 +2409,9 @@ ul {
 }
 
 /* FAQ */
+.faq {
+  padding-top: 120px;
+}
 
 .faq .container h2 {
   text-align: center;
@@ -2424,26 +2427,23 @@ ul {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
-  border-radius: 12px;
-  padding: 40px;
   background-color: $background_primary_color;
 }
 
 .faq__item {
   width: calc(50% - 15px);
   cursor: pointer;
-  padding: 20px 30px;
-  border-radius: 12px;
+  padding: 30px;
+  border-radius: 10px;
   align-self: flex-start;
-  background-color: $background_tertiary_color;
-  border: 1px solid $border_color;
+  background-color: $background_secondary_color;
 }
 
-.faq__item h6 {
+.faq__item h5 {
   transition: all .3s ease;
 }
 
-.faq__item:hover h6 {
+.faq__item:hover h5 {
   color: $hover_link_color;
 }
 
@@ -2503,12 +2503,24 @@ ul {
   opacity: 1;
 }
 
+@media (max-width: 1279px) {
+  .faq {
+    padding-top: 100px;
+  }
+}
+
 @media (max-width: 1023px) {
+  .faq {
+    padding-top: 80px;
+  }
   .faq__item {
     padding: 20px;
   }
 }
 @media (max-width: 767px) {
+  .faq {
+    padding-top: 60px;
+  }
   .faq .container > p {
     margin-bottom: 40px;
   }

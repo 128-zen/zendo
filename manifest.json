@@ -1,7 +1,7 @@
 {
   "name": "Zendo 128",
   "author": "128zen",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -902,90 +902,6 @@
           "type": "text",
           "description": "Enter answer",
           "label": "Item 4 Answer",
-          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, similique."
-        },
-        {
-          "identifier": "show_faq_item5",
-          "type": "checkbox",
-          "description": "Show item",
-          "label": "Toggle Item 5",
-          "value": true
-        },
-        {
-          "identifier": "faq_item5_heading",
-          "type": "text",
-          "description": "Enter question",
-          "label": "Item 5 Question",
-          "value": "Lorem ipsum dolor sit amet."
-        },
-        {
-          "identifier": "faq_item5_text",
-          "type": "text",
-          "description": "Enter answer",
-          "label": "Item 5 Answer",
-          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, similique."
-        },
-        {
-          "identifier": "show_faq_item6",
-          "type": "checkbox",
-          "description": "Show item",
-          "label": "Toggle Item 6",
-          "value": true
-        },
-        {
-          "identifier": "faq_item6_heading",
-          "type": "text",
-          "description": "Enter question",
-          "label": "Item 6 Question",
-          "value": "Lorem ipsum dolor sit amet."
-        },
-        {
-          "identifier": "faq_item6_text",
-          "type": "text",
-          "description": "Enter answer",
-          "label": "Item 6 Answer",
-          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, similique."
-        },
-        {
-          "identifier": "show_faq_item7",
-          "type": "checkbox",
-          "description": "Show item",
-          "label": "Toggle Item 7",
-          "value": true
-        },
-        {
-          "identifier": "faq_item7_heading",
-          "type": "text",
-          "description": "Enter question",
-          "label": "Item 7 Question",
-          "value": "Lorem ipsum dolor sit amet."
-        },
-        {
-          "identifier": "faq_item7_text",
-          "type": "text",
-          "description": "Enter answer",
-          "label": "Item 7 Answer",
-          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, similique."
-        },
-        {
-          "identifier": "show_faq_item8",
-          "type": "checkbox",
-          "description": "Show item",
-          "label": "Toggle Item 8",
-          "value": true
-        },
-        {
-          "identifier": "faq_item8_heading",
-          "type": "text",
-          "description": "Enter question",
-          "label": "Item 8 Question",
-          "value": "Lorem ipsum dolor sit amet."
-        },
-        {
-          "identifier": "faq_item8_text",
-          "type": "text",
-          "description": "Enter answer",
-          "label": "Item 8 Answer",
           "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, similique."
         }
       ]
