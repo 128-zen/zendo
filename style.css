@@ -2426,6 +2426,7 @@ ul {
 .faq__items {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .faq__item {
@@ -2444,7 +2445,6 @@ ul {
 }
 
 .faq__item:hover h5 {
-  margin-bottom: 12px;
   color: $hover_link_color;
 }
 
@@ -2454,6 +2454,11 @@ ul {
   line-height: 1.1;
   right: 0;
   transition: transform 0.3s ease-in-out;
+}
+
+.faq__item.open h5 {
+  margin-bottom: 12px;
+  color: $hover_link_color;
 }
 
 .faq__item.open h5::after {
@@ -2506,9 +2511,6 @@ ul {
   .faq__items {
     gap: 20px;
     padding: 20px;
-  }
-  .faq__item {
-    width: 100%;
   }
 }
 
@@ -2722,8 +2724,16 @@ ul {
   color: $text_primary;
 }
 
+.homepage-activity {
+  background-color: $background_secondary_color;
+}
+
 .homepage-activity .recent-activity-item:nth-child(n+4) {
   display: none;
+}
+
+.homepage-activity .recent-activity-item {
+  background-color: $background_quaternary_color;
 }
 
 .recent-activity-item h3 {
@@ -2742,10 +2752,19 @@ ul {
 }
 
 .recent-activity-item-parent:hover {
-  box-shadow: 2px 2px 0px 0px rgba(22, 24, 45, 0.50);
   border: 1px solid $border_color;
   background-color: $secondary_button_color;
   color: $text_primary;
+}
+
+.homepage-activity .recent-activity-item-parent {
+  background-color: $background_tertiary_color;
+  color: $text_primary;
+}
+
+.homepage-activity .recent-activity-item-parent:hover {
+  background-color: $primary_button_color;
+  color: $text_secondary;
 }
 
 .recent-activity-item-link {
@@ -2757,6 +2776,12 @@ ul {
   text-overflow: ellipsis;
   color: $text_primary;
 }
+
+.homepage-activity .recent-activity-item-link {
+  font-size: 16px;
+  font-weight: 400px;
+}
+
 .recent-activity-item-link:hover {
   color: $hover_link_color;
 }

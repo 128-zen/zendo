@@ -1,7 +1,7 @@
 {
   "name": "Zendo 128",
   "author": "128zen",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -821,6 +821,18 @@
           "description": "Insert link",
           "label": "Item 6 Link",
           "value": "#"
+        }
+      ]
+    },
+    {
+      "label": "Homepage Recent Activity Section",
+      "variables": [
+        {
+          "identifier": "show_recent_activity_section",
+          "type": "checkbox",
+          "description": "Show section",
+          "label": "Toggle Section",
+          "value": true
         }
       ]
     },

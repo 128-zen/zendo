@@ -376,6 +376,17 @@
 </section>
 {{/if}}
 
+{{#if settings.show_recent_activity_section}}
+  {{!-- Recent activity --}}
+  {{#if help_center.community_enabled}}
+    <section class="homepage-activity activity">
+      <div class="container section fade-in-up">
+        {{recent_activity scope='community'}}
+      </div>
+    </section>
+  {{/if}}
+{{/if}}
+
 {{#if settings.show_faq_section}}
 {{!-- FAQ Section --}}
 <section class="faq section">
