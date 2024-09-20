@@ -1453,18 +1453,18 @@ ul {
   top: 0;
 }
 
+.hero > svg:nth-of-type(2) {
+  right: 0;
+  bottom: 0;
+  left: auto;
+  top: auto;
+}
+
 .hero > svg:last-child {
   right: 0;
   left: auto;
 }
 
-.hero > svg path {
-  fill: $primary_button_color;
-}
-
-.hero > svg:first-of-type path:nth-of-type(1), .hero > svg:first-of-type path:nth-of-type(2), .hero > svg:first-of-type path:nth-of-type(5), .hero > svg:last-of-type path:nth-of-type(1), .hero > svg:last-of-type path:nth-of-type(2) {
-  fill: $background_primary_color;
-}
 
 @media (max-width: 1279px) {
   .hero-text {
@@ -1820,6 +1820,13 @@ ul {
 
 
 /* Introduction */
+.introduction {
+  margin-top: 80px;
+}
+
+.hero .introduction .container {
+  padding-top: 0;
+}
 
 .introduction__items {
   display: flex;
@@ -1831,7 +1838,8 @@ ul {
 .introduction__item {
   width: calc(33.3% - 20px);
   display: flex;
-  padding: 40px;
+  padding: 30px;
+  padding-right: 20px;
   border-radius: 12px;
   flex-direction: column;
   border-right: 10px solid $border_color_item1;
@@ -1850,6 +1858,7 @@ ul {
   font-size: 0;
   border-radius: 50px;
   padding: 15px;
+  width: fit-content;
   background-color: $background_tertiary_color;
 }
 
@@ -1860,6 +1869,17 @@ ul {
 
 .introduction__item h5 {
   margin: 20px 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.introduction__item h5:hover svg {
+  transform: rotate(45deg);
+}
+
+.introduction__item h5:hover svg path {
+  stroke: $hover_link_color;
 }
 
 @media (max-width: 1023px) {
