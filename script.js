@@ -262,16 +262,18 @@
 
   document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.hero') && !document.querySelector('.category-page')) {
-        const sections = document.querySelectorAll('section');
-        
-        for (let i = 0; i < sections.length - 1; i++) {
-            const firstSection = window.getComputedStyle(sections[i]);
-            const secondSection = window.getComputedStyle(sections[i + 1]);
-            
-            if (firstSection.backgroundColor !== secondSection.backgroundColor) {
-                sections[i + 1].classList.add('padding-top');
-            }
+      const sections = document.querySelectorAll('section');
+      
+      for (let i = 0; i < sections.length - 1; i++) {
+        if(!sections[i].classList.contains('recent-activity-item')) {
+          const firstSection = window.getComputedStyle(sections[i]);
+          const secondSection = window.getComputedStyle(sections[i + 1]);
+          
+          if (firstSection.backgroundColor !== secondSection.backgroundColor) {
+              sections[i + 1].classList.add('padding-top');
+          }
         }
+      }
     }
   });
 

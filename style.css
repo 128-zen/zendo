@@ -2205,9 +2205,9 @@ ul {
 }
 
 .categories-layout2 .categories__section > a {
-  background-color: $primary_button_color;
-  border: 1px solid $primary_button_color;
-  color: $text_secondary;
+  background-color: $secondary_button_color;
+  border: 1px solid $secondary_button_color;
+  color: $text_primary;
 }
 
 .categories-layout2 .categories__section > a:hover {
@@ -7103,13 +7103,13 @@ html[dir=rtl] .notification-left-aligned {
 .button-primary:hover {
   background-color: $secondary_button_color;
   border: 1px solid $secondary_button_color;
-  color: $text_secondary;
+  color: $text_primary;
 }
 
 .button-secondary {
   background-color: $secondary_button_color;
   border: 1px solid $secondary_button_color;
-  color: $text_secondary;
+  color: $text_primary;
 }
 
 .button-secondary:hover {
