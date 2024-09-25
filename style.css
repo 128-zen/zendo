@@ -409,7 +409,7 @@ ul {
 /***** Buttons *****/
 .subscriptions-subscribe button, .requests-table-toolbar .organization-subscribe button, .community-follow button, .article-subscribe button, .section-subscribe button, .split-button button, .article-subscribe button, .community-follow button, .comment-form-controls input[type=submit] {
   background-color: transparent;
-  border-radius: 8px;
+  border-radius: 50px;
   cursor: pointer;
   display: inline-block;
   font-size: 18px;
@@ -418,9 +418,9 @@ ul {
   margin: 0;
   text-align: center;
   transition: all .3s ease;
-  padding: 14px 34px;
-  background-color: $secondary_button_color;
-  color: $text_primary;
+  padding: 10px 30px;
+  background-color: $primary_button_color;
+  color: $text_secondary;
   border: 1px solid $primary_button_color;
   user-select: none;
   white-space: nowrap;
@@ -438,10 +438,9 @@ ul {
 
 
 .article-subscribe button:hover, .community-follow button:hover, .subscriptions-subscribe button:hover, .section-subscribe button:hover, .split-button button:hover {
-  border: 1px solid $background_secondary_color;
+  border: 1px solid $secondary_button_color;
   background-color: $secondary_button_color;
   color: $text_primary;
-  box-shadow: 2px 2px 0px 0px rgba(22, 24, 45, 0.50);
 }
 
 .comment-form-controls input[type=submit] {
@@ -676,7 +675,7 @@ ul {
 
 /***** Header *****/
 .header {
-  background-color: transparent;
+  background-color: $background_primary_color;
   position: relative;
   z-index: 99;
 }
@@ -2188,7 +2187,7 @@ ul {
   border: 1px solid $border_color;
 }
 
-.categories__section > a {
+.categories__section > a:hover {
   background-color: $primary_button_color;
   color: $text_secondary;
   border: 1px solid $primary_button_color;
@@ -3040,10 +3039,10 @@ ul {
 .category-page__article > div:last-of-type, .section-page__article > div:last-of-type, .featured-posts-btn {
   position: relative;
   display: flex;
-  gap: 15px;
+  gap: 10px;
   align-items: center;
   width: fit-content;
-  font-size: 18px;
+  font-size: 14px;
   transition: all .3s ease;
 }
 
@@ -3274,10 +3273,8 @@ ul {
   width: 100%;
   height: 100%;
   padding: 30px;
-  border-radius: 6px;
-  box-shadow: 2px 2px 0px 0px rgba(22, 24, 45, 0.50);
-  border: 1px solid $border_color;
-  background-color: $background_tertiary_color;
+  border-radius: 10px;
+  background-color: $background_secondary_color;
 }
 
 @media (max-width: 1023px) {
