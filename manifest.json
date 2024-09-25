@@ -1,7 +1,7 @@
 {
   "name": "Zendo 128",
   "author": "128zen",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -1196,32 +1196,6 @@
           "description": "Enter text",
           "label": "Item 3 Text",
           "value": "Professionally cultivate one-to-one find customer service with robust ideas."
-        }
-      ]
-    },
-    {
-      "label": "Category Page",
-      "variables": [
-        {
-          "identifier": "category_heading",
-          "type": "text",
-          "description": "Enter hero heading",
-          "label": "Hero Heading",
-          "value": "Hello, how can we help you?"
-        },
-        {
-          "identifier": "show_category_subtitle",
-          "type": "checkbox",
-          "description": "Show hero subtitle",
-          "label": "Toggle Subtitle Component",
-          "value": true
-        },
-        {
-          "identifier": "category_subtitle",
-          "type": "text",
-          "description": "Enter hero subtitle",
-          "label": "Hero Subtitle",
-          "value": "We have answers for all your questions. Let’s verify all the information to find out where your shipment is."
         }
       ]
     },
