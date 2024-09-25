@@ -1521,7 +1521,7 @@ ul {
 .hero .search input[type=submit]:hover, .error-page .search input[type=submit]:hover {
   background-color: $secondary_button_color;
   border: 1px solid $secondary_button_color;
-  color: $text_secondary;
+  color: $text_primary;
 }
 .hero .search-icon, .error-page .search-icon {
   left: 20px;
@@ -2007,6 +2007,16 @@ ul {
   .quick-links__items {
     margin-top: 40px;
   }
+  .quick-links__item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .quick-links__item > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 @media (max-width: 767px) {
   .quick-links__items {
@@ -2015,6 +2025,7 @@ ul {
   .quick-links__item {
     width: 100%;
     max-width: 470px;
+    gap: 30px;
   }
 }
 
@@ -2070,8 +2081,21 @@ ul {
   border: 1px solid $border_color;
 }
 
+.resources__item > a svg path {
+  stroke: $text_primary;
+}
+
+.resources__item > a:hover {
+  background-color: $primary_button_color;
+  border: 1px solid $primary_button_color;
+}
+
 .resources__item > a:hover svg {
   transform: rotate(45deg);
+}
+
+.resources__item > a:hover svg path {
+  stroke: $text_secondary;
 }
 
 @media (max-width: 1023px) {
@@ -2162,6 +2186,12 @@ ul {
   background-color: transparent;
   color: $text_primary;
   border: 1px solid $border_color;
+}
+
+.categories__section > a {
+  background-color: $primary_button_color;
+  color: $text_secondary;
+  border: 1px solid $primary_button_color;
 }
 
 .categories__section ul {
