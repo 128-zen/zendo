@@ -2802,17 +2802,15 @@ ul {
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
-  padding: 8px 18px;
-  background-color: $background_primary_color;
-  border: 1px solid $background_primary_color;
+  padding: 8px 10px;
+  background-color: $background_quaternary_color;
   color: $text_primary;
-  border-radius: 50px;
+  border-radius: 8px;
 }
 
 .recent-activity-item-parent:hover {
-  border: 1px solid $border_color;
-  background-color: $secondary_button_color;
-  color: $text_primary;
+  background-color: $primary_button_color;
+  color: $text_secondary;
 }
 
 .homepage-activity .recent-activity-item-parent {
@@ -4332,9 +4330,9 @@ ul {
   gap: 30px;
 }
 .featured-posts-item {
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 30px;
-  background: $background_primary_color;
+  background: $background_secondary_color;
   width: calc(33.3% - 20px);
 }
 .featured-posts-item a {
@@ -4409,8 +4407,6 @@ ul {
 }
 .activity .button {
   margin-top: 50px;
-  color: $text_primary;
-  background-color: $secondary_button_color;
 }
 
 @media (max-width: 1279px) {
@@ -4551,6 +4547,10 @@ ul {
   display: flex;
   align-items: center;
   gap: 6px;
+}
+.striped-list-count-item svg {
+  width: 16px;
+  height: 16px;
 }
 .striped-list-count-item:last-child::after {
   display: none;
