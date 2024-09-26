@@ -3689,11 +3689,11 @@ ul {
   margin: 15px 0;
 }
 .article-votes {
-  border-radius: 6px;
+  border-radius: 10px;
   padding: 40px;
   text-align: center;
   margin-top: 40px;
-  background: $background_primary_color;
+  background: $background_secondary_color;
 }
 
 .article-votes a {
@@ -3706,18 +3706,16 @@ ul {
   cursor: pointer;
   border: none;
   border-radius: 8px;
-  background-color: $primary_button_color;
+  background-color: $background_quaternary_color;
 }
 .article-vote path {
-  fill: $text_secondary;
+  fill: $text_primary;
 }
 .article-vote:hover {
-  border: 1px solid $border_color;
-  background-color: $secondary_button_color;
-  box-shadow: 2px 2px 0px 0px rgba(22, 24, 45, 0.50);
+  background-color: $primary_button_color;
 }
 .article-vote:hover path {
-  fill: $text_primary;
+  fill: $text_secondary;
 }
 .article-votes-count {
   margin-bottom: 10px;

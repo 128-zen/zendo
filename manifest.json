@@ -1,7 +1,7 @@
 {
   "name": "Zendo 128",
   "author": "128zen",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -41,7 +41,7 @@
           "type": "color",
           "description": "Choose secondary background color",
           "label": "Background Secondary Color",
-          "value": "#F3F8FE"
+          "value": "#F7F9FC"
         },
         {
           "identifier": "background_tertiary_color",
