@@ -1,7 +1,7 @@
 {
   "name": "Zendo 128",
   "author": "128zen",
-  "version": "1.0.31",
+  "version": "1.0.32",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -76,7 +76,7 @@
           "type": "color",
           "description": "Choose primary button background color",
           "label": "Primary Button Background Color",
-          "value": "#6658EB"
+          "value": "#635BFF"
         },
         {
           "identifier": "secondary_button_color",
@@ -90,7 +90,7 @@
           "type": "color",
           "description": "Choose color for the hover state of the links",
           "label": "Hover Link Color",
-          "value": "#6658EB"
+          "value": "#635BFF"
         },
         {
           "identifier": "border_color",

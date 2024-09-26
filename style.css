@@ -3132,6 +3132,9 @@ ul {
   position: sticky;
   top: 94px;
   align-self: start;
+  padding: 20px 20px 40px;
+  border-radius: 10px;
+  background-color: $background_tertiary_color;
 }
 
 .nav .search-container {
@@ -3163,9 +3166,7 @@ ul {
 }
 
 .nav__list, .nav__articles {
-  border-radius: 6px;
-  padding: 20px 20px 40px;
-  background-color: $background_primary_color;
+  
 }
 
 .nav__category {
@@ -3199,7 +3200,7 @@ ul {
   margin-top: 15px;
   flex-direction: column;
   align-items: start;
-  border-left: 1px solid $primary_button_color;
+  border-left: 2px solid $primary_button_color;
 }
 
 .nav__sections.open {
