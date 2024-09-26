@@ -445,13 +445,13 @@ ul {
 .comment-form-controls input[type=submit] {
   background-color: $primary_button_color;
   border: 1px solid $primary_button_color;
-  color: $text_primary;
+  color: $text_secondary;
 }
 
 .comment-form-controls input[type=submit]:hover {
   background-color: $secondary_button_color;
   border: 1px solid $secondary_button_color;
-  color: $text_secondary;
+  color: $text_primary;
 }
 
 .button-large[disabled], input[type=submit][disabled] {
@@ -1620,17 +1620,9 @@ ul {
   gap: 15px;
 }
 
-.page-header .dropdown-toggle div, .featured-posts-btn > div {
-  padding: 10px;
-  border-radius: 50px;
-  font-size: 0;
-  box-shadow: 2px 2px 0px 0px rgba(22, 24, 45, 0.50);
-  border: 1px solid $border_color;
-  background-color: $background_tertiary_color;
-}
 
 .page-header .dropdown-toggle path, .featured-posts-btn svg path {
-  stroke: $text_primary;
+  stroke: $text_secondary;
 }
 
 .page-header .dropdown-toggle:hover svg, .page-header .dropdown-toggle[aria-expanded='true'] svg {
@@ -3917,10 +3909,9 @@ ul {
 /***** Comments *****/
 /* Styles comments inside articles, posts and requests */
 .comment {
-  padding-top: 30px;
+  padding-bottom: 30px;
   margin-bottom: 30px;
   border-bottom;: 1px solid $border_color;
-  background-color: $background_tertiary_color;
 }
 .comment:last-of-type {
   margin-bottom: 0;
@@ -4456,18 +4447,14 @@ ul {
 }
 
 .topic-header .dropdown-toggle, .my-activities-following-header .dropdown-toggle, .profile-section-sorter .dropdown-toggle {
-  padding: 14px 20px;
+  padding: 10px 20px;
   border-radius: 8px;
   transition: all .3s ease;
-  box-shadow: 2px 2px 0px 0px rgba(22, 24, 45, 0.50);
-  border: 1px solid $border_color;
   background-color: $background_tertiary_color;
 }
 
 .topic-header .dropdown-toggle:hover, .topic-header .dropdown-toggle[aria-expanded='true'], .my-activities-following-header .dropdown-toggle:hover, .my-activities-following-header .dropdown-toggle[aria-expanded='true'], .profile-section-sorter .dropdown-toggle:hover, .profile-section-sorter .dropdown-toggle[aria-expanded='true'] {
-  box-shadow: none;
   background-color: $primary_button_color;
-  border: 1px solid $primary_button_color;
   color: $text_secondary;
 }
 
@@ -4531,10 +4518,8 @@ ul {
   text-align: left;
   padding: 30px;
   width: calc(33.3% - 20px);
-  border-radius: 12px;
-  box-shadow: 2px 2px 0px 0px rgba(22, 24, 45, 0.50);
-  border: 1px solid $border_color;
-  background-color: $background_tertiary_color;
+  border-radius: 10px;
+  background-color: $background_quaternary_color;
 } 
 
 .striped-list-title {
@@ -4571,7 +4556,7 @@ ul {
   display: none;
 }
 .striped-list-count-item svg path {
-  fill: $secondary_button_color;
+  stroke: $primary_button_color;
 }
 .striped-list-number {
   text-align: center;
@@ -4643,9 +4628,9 @@ ul {
 /***** Status labels *****/
 /* Styles labels used in posts, articles and requests */
 .status-label {
-  background-color: $background_primary_color;
+  background-color: $primary_button_color;
   border-radius: 8px;
-  color: $text_primary;
+  color: $text_secondary;
   font-size: 14px;
   font-weight: 400;
   margin-right: 2px;
@@ -6928,7 +6913,7 @@ html[dir=rtl] .notification-left-aligned {
   color: $text_primary;
 }
 .dropdown-toggle p {
-  color: $text_primary;
+  color: $text_secondary;
 }
 .dropdown-toggle span {
   font-size: 18px;
