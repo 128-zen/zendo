@@ -369,9 +369,8 @@ textarea {
   outline: none;
   padding: 18px;
   height: 140px;
-  box-shadow: 2px 2px 0px 0px rgba(22, 24, 45, 0.50);
   border: 1px solid $border_color;
-  background-color: $background_tertiary_color;
+  background-color: $background_quaternary_color;
 }
 
 .container {
@@ -445,15 +444,14 @@ ul {
 
 .comment-form-controls input[type=submit] {
   background-color: $primary_button_color;
-  border: 1px solid $secondary_button_color;
-  color: $text_secondary;
+  border: 1px solid $primary_button_color;
+  color: $text_primary;
 }
 
 .comment-form-controls input[type=submit]:hover {
   background-color: $secondary_button_color;
-  border: 1px solid $background_secondary_color;
-  color: $text_primary;
-  box-shadow: 2px 2px 0px 0px rgba(22, 24, 45, 0.50);
+  border: 1px solid $secondary_button_color;
+  color: $text_secondary;
 }
 
 .button-large[disabled], input[type=submit][disabled] {
@@ -3605,7 +3603,7 @@ ul {
 }
 .article-body blockquote, .post-body blockquote {
   padding: 0 20px;
-  border-left: 1px solid $primary_button_color;
+  border-left: 2px solid $primary_button_color;
   margin: 0;
   color: $body_primary;
 }
@@ -3625,7 +3623,7 @@ ul {
   display: flex;
   justify-content: end;
   padding-top: 30px;
-  border-top: 1px solid $background_secondary_color;
+  border-top: 1px solid $border_color;
 }
 .article-comment-count {
   color: lighten($text_color, 20%);
@@ -3919,11 +3917,9 @@ ul {
 /***** Comments *****/
 /* Styles comments inside articles, posts and requests */
 .comment {
-  padding: 20px;
+  padding-top: 30px;
   margin-bottom: 30px;
-  border-radius: 8px;
-  box-shadow: 2px 2px 0px 0px rgba(22, 24, 45, 0.50);
-  border: 1px solid $border_color;
+  border-bottom;: 1px solid $border_color;
   background-color: $background_tertiary_color;
 }
 .comment:last-of-type {
