@@ -1,7 +1,7 @@
 {
   "name": "Zendo 128",
   "author": "128zen",
-  "version": "1.0.32",
+  "version": "1.0.33",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -62,7 +62,7 @@
           "type": "color",
           "description": "Choose text primary color",
           "label": "Text Primary Color",
-          "value": "#1B1641"
+          "value": "#0A2540"
         },
         {
           "identifier": "text_secondary",

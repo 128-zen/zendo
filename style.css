@@ -817,7 +817,7 @@ ul {
 
 .user-nav-list > li > .sign-in {
   border: 1px solid $background_quaternary_color;
-  color: $text_primary;
+  color: $hover_link_color;
   background-color: $background_quaternary_color;
 }
 
@@ -3036,6 +3036,14 @@ ul {
   line-height: 1.4;
 }
 
+.category-page__article > div:first-of-type a, .section-page__article > div:first-of-type a {
+  color: $hover_link_color;
+}
+
+.category-page__article > div:first-of-type a:hover, .section-page__article > div:first-of-type a:hover {
+  color: $body_primary;
+}
+
 .category-page__article > div:last-of-type, .section-page__article > div:last-of-type, .featured-posts-btn {
   position: relative;
   display: flex;
@@ -3151,7 +3159,7 @@ ul {
 }
 
 .nav input[type=search]{
-  padding: 14px 20px 14px 50px;
+  padding: 10px 20px 10px 50px;
   border-radius: 8px;
 }
 
@@ -3218,7 +3226,7 @@ ul {
 .nav__sections a {
   display: inline;
   margin-bottom: 15px;
-  color: $body_primary;
+  color: $text_primary;
 }
 
 .nav__sections a:hover {
