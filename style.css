@@ -1599,6 +1599,9 @@ ul {
   flex-grow: 1;
   margin-bottom: 0;
 }
+.page-header h1 {
+  color: $text_secondary;
+}
 .page-header-description {
   margin: 10px 0 30px 0;
   word-break: break-word;
@@ -1621,8 +1624,12 @@ ul {
 }
 
 
-.page-header .dropdown-toggle path, .featured-posts-btn svg path {
+.page-header .dropdown-toggle path {
   stroke: $text_secondary;
+}
+
+.featured-posts-btn svg path {
+  stroke: $text_primary;
 }
 
 .page-header .dropdown-toggle:hover svg, .page-header .dropdown-toggle[aria-expanded='true'] svg {
@@ -2775,7 +2782,6 @@ ul {
   padding: 30px;
   width: calc(33.3% - 20px);
   border-radius: 10px;
-  border: 1px solid $border_color;
   background-color: $background_tertiary_color;
   color: $text_primary;
 }
@@ -2802,7 +2808,7 @@ ul {
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
-  padding: 8px 10px;
+  padding: 4px 10px;
   background-color: $background_quaternary_color;
   color: $text_primary;
   border-radius: 8px;
@@ -4939,9 +4945,6 @@ ul {
 
 .post-sidebar input[type=search]::after {
   font-size: 15px;
-}
-.post-sidebar .button, .community-footer .button, .topic-header .button {
-  padding: 15px 25px;
 }
 .comment-form-controls label {
   margin-right: 30px;
