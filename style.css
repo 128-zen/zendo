@@ -6487,6 +6487,7 @@ ul {
 
 .search-results-page .nav {
   padding: 0;
+  background-color: $background_quaternary_color;
 }
 
 .search-results-column {
