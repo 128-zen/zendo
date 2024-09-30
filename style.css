@@ -5583,14 +5583,17 @@ ul {
 .request-main .comment-form-controls {
   display: block;
 }
+.request-main .comment-form-controls button {
+  border-radius: 8px;
+}
 .request-main .comment-ccs {
   display: block;
 }
 .request-main .comment-show-container {
-  border-radius: 2px;
+  border-radius: 8px;
   border: 1px solid #ddd;
   color: $text_primary;
-  background-color: $background_tertiary_color;
+  background-color: $background_quaternary_color;
   text-align: inherit;
   padding: 8px 25px;
   width: 100%;
