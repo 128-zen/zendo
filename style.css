@@ -6730,8 +6730,8 @@ ul {
 }
 .search-result-description em {
   padding: 0 3px;
-  background-color: $background_primary_color;
-  color: $text_primary;
+  background-color: $primary_button_color;
+  color: $text_secondary;
 }
 .search-result-bottom {
   margin-top: 20px;
