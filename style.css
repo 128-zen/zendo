@@ -1117,6 +1117,7 @@ ul {
 .submit-request p {
   font-size: 18px;
   margin-top: 20px;
+  text-align: right;
   color: $body_secondary;
 }
 
@@ -1131,16 +1132,13 @@ ul {
     padding-top: 80px;
   }
 }
-@media (max-width: 767px) { 
+@media (max-width: 1023px) {
   .submit-request .container {
+    padding: 60px;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 50px;
     gap: 30px;
-  }
-  .submit-request h3 {
-    max-width: none;
   }
   .submit-request .container div {
     flex-direction: column-reverse;
@@ -1149,6 +1147,15 @@ ul {
   }
   .submit-request p {
     margin-top: 0;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) { 
+  .submit-request .container {
+    padding: 50px;
+  }
+  .submit-request h3 {
+    max-width: none;
   }
 }
 @media (max-width: 767px) {
