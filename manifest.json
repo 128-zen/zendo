@@ -1,7 +1,7 @@
 {
   "name": "Zendo 128",
   "author": "128zen",
-  "version": "1.0.44",
+  "version": "1.0.45",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -1095,13 +1095,6 @@
     {
       "label": "Homepage Find Solution Section",
       "variables": [
-        {
-          "identifier": "show_find_solution_section",
-          "type": "checkbox",
-          "description": "Show section",
-          "label": "Toggle Section",
-          "value": true
-        },
         {
           "identifier": "find_solution_heading",
           "type": "text",

@@ -2574,7 +2574,7 @@ ul {
 .find-solution > svg {
   position: absolute;
   z-index: 1;
-  bottom: 0;
+  bottom: 160px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -2624,6 +2624,9 @@ ul {
 @media (max-width: 1279px) {
   .find-solution {
     padding: 100px 0 260px;
+  }
+  .find-solution > svg {
+    bottom: 0;
   }
 }
 
