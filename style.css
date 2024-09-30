@@ -635,18 +635,17 @@ ul {
   font-weight: 400;
   line-height: 120%; /* 21.6px */
   letter-spacing: 0.63px;
-  padding: 14px 34px;
+  padding: 10px 30px;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 50px;
   background-color: $primary_button_color;
   border: 1px solid $primary_button_color;
   color: $text_secondary;
 }
 .form footer input:hover {
   background-color: $secondary_button_color;
-  border: 1px solid $background_secondary_color;
+  border: 1px solid $secondary_button_color;
   color: $text_primary;
-  box-shadow: 2px 2px 0px 0px rgba(22, 24, 45, 0.50);
 }
 
 .form footer a {
