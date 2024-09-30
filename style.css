@@ -1103,7 +1103,7 @@ ul {
   align-items: flex-end;
 }
 
-.submit-request .container div .button-secondary {
+.submit-request .container div .button-secondary:hover {
   background-color: $background_quaternary_color;
   border: 1px solid $background_quaternary_color;
   color: $hover_link_color;
@@ -6412,10 +6412,10 @@ ul {
   border-radius: 50%;
   background-size: 14px 14px;
   background-repeat: no-repeat;
-  background-color: $background_primary_color;
+  background-color: $primary_button_color;
   background-position: 50% 50%;
   text-align: center;
-  color: #ccc;
+  color: $text_secondary;
 }
 [dir=rtl] .profile-activity-icon {
   right: 0;
