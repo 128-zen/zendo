@@ -3910,7 +3910,7 @@ ul {
 .comment {
   padding-bottom: 30px;
   margin-bottom: 30px;
-  border-bottom;: 1px solid $border_color;
+  border-bottom: 1px solid $border_color;
 }
 .comment:last-of-type {
   margin-bottom: 0;
