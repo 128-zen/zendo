@@ -1149,18 +1149,16 @@ ul {
     margin-top: 0;
     text-align: center;
   }
-}
-@media (max-width: 767px) { 
-  .submit-request .container {
-    padding: 50px;
-  }
   .submit-request h3 {
     max-width: none;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) { 
   .submit-request .container {
     padding: 40px;
+  }
+  .submit-request h3 {
+    max-width: none;
   }
 }
 
