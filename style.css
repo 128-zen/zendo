@@ -2847,9 +2847,12 @@ ul {
 }
 
 /***** Recent activity *****/
-
 .recent-activity h2 {
   text-align: left;
+}
+
+.homepage-activity .recent-activity h2 {
+  font-size: 56px;
 }
 .recent-activity-list {
   display: flex;
@@ -3000,6 +3003,9 @@ ul {
   margin-right: 3px;
 }
 @media (max-width: 1023px) {
+  .homepage-activity .recent-activity h2 {
+    font-size: 46px;
+  }
   .recent-activity-list {
     margin-top: 40px;
   }
@@ -3008,6 +3014,9 @@ ul {
   }
 }
 @media (max-width: 767px) {
+  .homepage-activity .recent-activity h2 {
+    font-size: 40px;
+  }
   .recent-activity-list {
     gap: 20px;
   }
