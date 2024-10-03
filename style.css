@@ -774,15 +774,15 @@ ul {
 
 .footer-language-selector button {
   font-size: 18px;
-  color: $text_primary;
+  color: $text_secondary;
 }
 
 .footer-language-selector button:hover {
   color: $hover_link_color;
 }
 .footer-language-selector button path {
-  fill: $text_primary;
-  stroke: $text_primary;
+  fill: $text_secondary;
+  stroke: $text_secondary;
 }
 
 .footer-language-selector button:hover path {
@@ -1093,7 +1093,7 @@ ul {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 60px;
+  gap: 50px;
   background-color: $background_primary_color;
 }
 
@@ -1138,11 +1138,11 @@ ul {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 30px;
+    gap: 20px;
   }
   .submit-request .container div {
     flex-direction: column-reverse;
-    gap: 20px;
+    gap: 40px;
     align-items: center;
   }
   .submit-request p {
