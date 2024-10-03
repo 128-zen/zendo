@@ -1,7 +1,7 @@
 {
   "name": "Zendo 128",
   "author": "128zen",
-  "version": "1.0.48",
+  "version": "1.0.49",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -34,7 +34,7 @@
           "type": "color",
           "description": "Choose primary background color",
           "label": "Background Primary Color",
-          "value": "#1B1641"
+          "value": "#0A2540"
         },
         {
           "identifier": "background_secondary_color",
@@ -186,11 +186,11 @@
           "type": "list",
           "description": "text_font_description",
           "label": "text_font_label",
-          "value": "Aspekta, Arial, sans-serif",
+          "value": "Inter, Arial, sans-serif",
           "options": [
             {
-              "label": "Aspekta",
-              "value": "Aspekta, Arial, sans-serif"
+              "label": "Inter",
+              "value": "Inter, Arial, sans-serif"
             },
             {
               "label": "System",

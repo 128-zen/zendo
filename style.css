@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: 'Aspekta';
-  src: url($assets-aspekta-400-woff2) format('woff2');
+  font-family: 'Inter';
+  src: url($assets-inter-regular-woff2) format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -10,8 +10,8 @@
 
 @font-face {
   font-family: 'Aspekta';
-  src: url($assets-aspekta-550-woff2) format('woff2');
-  font-weight: 550;
+  src: url($assets-aspekta-600-woff2) format('woff2');
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -247,56 +247,58 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 550;
+  font-weight: 600;
   font-family: $heading_font;
   margin-top: 0;
   margin-bottom: 0;
-  line-height: 100%;
 }
 
 .hero-text {
   font-size: 72px;
-  letter-spacing: -1.65px;
+  letter-spacing: -1.61px;
+  line-height: 110%;
   margin-bottom: 40px;
   color: $text_secondary;
 }
 
 h1 {
-  font-size: 62px;
-  line-height: 110%;
-  letter-spacing: -1.44px;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: -1.25px;
 }
 
 h2 {
-  font-size: 56px;
-  letter-spacing: -1.26px;
+  font-size: 44px;
+  line-height: normal;
+  letter-spacing: -1.25px;
 }
 
 h3 {
   font-size: 40px;
-  line-height: 110%; /* 37.4px */
-  letter-spacing: -0.68px;
+  line-height: 120%;
+  letter-spacing: -0.89px;
 }
 
 h4 {
   font-size: 26px;
-  line-height: 110%; /* 30.8px */
-  letter-spacing: -0.26px;
+  line-height: normal; 
+  letter-spacing: -0.47px;
 }
 
 h5 {
   font-size: 24px;
-  line-height: 120%; /* 30.8px */
-  letter-spacing: -0.24px;
+  line-height: normal; /* 30.8px */
+  letter-spacing: -0.47px;
 }
 
 h6 {
   font-size: 22px;
-  line-height: 110%; /* 30.8px */
-  letter-spacing: -0.22px;
+  line-height: normal;
+  letter-spacing: -0.47px;
 }
 
 p {
+  font-family: $text_font;
   font-size: 16px;
   font-weight: 400;
   line-height: 140%;
@@ -308,15 +310,41 @@ p {
   font-size: 18px;
 }
 
+.h2 {
+  font-size: 56px;
+}
+
+.h3 {
+  font-size: 40px;
+}
+
 @media (max-width: 1279px) {
   .hero-text {
     font-size: 60px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
+  .hero-text {
+    font-size: 50px;
+  }
   h1 {
     font-size: 44px;
+  }
+  h2 {
+    font-size: 38px;
+  }
+  h3 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-text {
+    font-size: 46px;
+  }
+  h1 {
+    font-size: 40px;
   }
   h2 {
     font-size: 36px;
@@ -1486,6 +1514,12 @@ ul {
   .hero > svg path:last-of-type {
     display: none;
   }
+  .hero__content {
+    max-width: 90%;
+  }
+  .hero__content p {
+    max-width: 575px;
+  }
 }
 @media (max-width: 767px) {
   .hero__content {
@@ -1920,8 +1954,9 @@ ul {
 
 /* Quick Links */
 .quick-links h2 {
-  margin-bottom: 20px;
   text-align: center;
+  max-width: 750px;
+  margin: 0 auto 20px;
 }
 
 .quick-links .container > p {
@@ -1942,9 +1977,9 @@ ul {
   position: relative;
   width: calc(50% - 15px);
   display: flex;
-  gap: 40px;
+  gap: 30px;
   border-radius: 10px;
-  padding: 30px;
+  padding: 40px;
   text-align: left;
   background-color: $background_tertiary_color;
 }
@@ -2132,13 +2167,14 @@ ul {
 }
 
 .categories__header {
-  max-width: 645px;
+  max-width: 750px;
   text-align: center;
   margin: 0 auto 60px;
 }
 
 .categories__header p {
   margin-top: 20px;
+  max-width: 645px;
 }
 
 .categories__head {
@@ -2488,12 +2524,14 @@ ul {
 
 .faq .container h2 {
   text-align: center;
-  margin-bottom: 20px;
+  max-width: 750px;
+  margin: 0 auto 20px;
 }
 
 .faq .container > p {
   text-align: center;
-  margin-bottom: 60px;
+  max-width: 645px;
+  margin: 0 auto 60px;
 }
 
 .faq__items {
@@ -2572,7 +2610,6 @@ ul {
   }
   .faq__items {
     gap: 20px;
-    padding: 20px;
   }
 }
 
@@ -2599,13 +2636,14 @@ ul {
 }
 
 .find-solution h2 {
-  margin-bottom: 20px;
+  max-width: 750px;
+  margin: 0 auto 20px;
   text-align: center;
 }
 
 .find-solution .container > p {
   text-align: center;
-  max-width: 550px;
+  max-width: 645px;
   margin: 0 auto;
 }
 
