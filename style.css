@@ -330,6 +330,9 @@ p {
   .hero-text {
     font-size: 60px;
   }
+  .h3 {
+    font-size: 36px;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -345,6 +348,9 @@ p {
   h3 {
     font-size: 36px;
   }
+  .h2 {
+    font-size: 46px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -359,6 +365,9 @@ p {
   }
   h3 {
     font-size: 30px;
+  }
+  .h2 {
+    font-size: 40px;
   }
 }
 a {

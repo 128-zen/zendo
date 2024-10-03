@@ -141,7 +141,7 @@
 {{!-- Quick Links Section --}}
 <section class="quick-links section">
   <div class="container">
-    <h2 class="fade-in-up">{{settings.quick_links_heading}}</h2>
+    <div class="h2 fade-in-up">{{settings.quick_links_heading}}</div>
     <p class="fade-in-up">{{settings.quick_links_subtitle}}</p>
     <div class="quick-links__items">
       <div class="quick-links__item fade-in-up">
@@ -290,7 +290,7 @@
     {{#each categories}}
       <div class="categories__item">
         <div class="categories__head">
-          <h2 class="fade-in-up">{{name}}</h2>
+          <div class="h2 fade-in-up">{{name}}</div>
           <div class="fade-in-up">
             <a class="button button-primary" href="{{url}}">{{t 'see_all_sections'}}</a>
           </div>
@@ -337,9 +337,9 @@
   <div class="container">
     {{#if settings.show_category2_header}}
       <div class="categories__header">
-        <h2>{{settings.category2_heading}}</h2>
+        <div class="h2 fade-in-up">{{settings.category2_heading}}</div>
         {{#if settings.show_category2_subtitle}}
-          <p>{{settings.category2_subtitle}}</p>
+          <p class="fade-in-up">{{settings.category2_subtitle}}</p>
         {{/if}}
       </div>
     {{/if}}
@@ -384,7 +384,7 @@
   {{#if promoted_articles}}
     <section class="promoted-articles">
       <div class="container section">
-        <h2 class="fade-in-up">{{settings.fourth_section_heading}}</h2>
+        <div class="h2 fade-in-up">{{settings.fourth_section_heading}}</div>
         <p class="fade-in-up">{{settings.fourth_section_subtitle}}</p>
         <div class="promoted-articles__items">
           {{#each promoted_articles}}
@@ -403,7 +403,7 @@
 <section class="videos section">
   <div class="container">
     <div class="videos__head">
-      <h2 class="fade-in-up">{{settings.videos_heading}}</h2>
+      <div class="h2 fade-in-up">{{settings.videos_heading}}</div>
       <a class="button button-primary" href="{{settings.videos_button_link}}" target="_blank">{{settings.videos_button}}</a>
     </div>
     <div class="videos__list">
@@ -487,7 +487,7 @@
 {{!-- FAQ Section --}}
 <section class="faq section">
   <div class="container">
-    <h2 class="fade-in-up">{{settings.faq_heading}}</h2>
+    <div class="h2 fade-in-up">{{settings.faq_heading}}</div>
     <p class="fade-in-up">{{settings.faq_subtitle}}</p>
     <div class="faq__items">
       <div class="faq__item fade-in-up">
