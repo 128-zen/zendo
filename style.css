@@ -308,6 +308,12 @@ p {
   font-size: 18px;
 }
 
+@media (max-width: 1279px) {
+  .hero-text {
+    font-size: 60px;
+  }
+}
+
 @media (max-width: 767px) {
   h1 {
     font-size: 44px;
@@ -1443,7 +1449,7 @@ ul {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 900px;
+  max-width: 920px;
   width: 100%;
   z-index: 3;
 }
@@ -1541,6 +1547,7 @@ ul {
 } 
 .popular-keywords p {
   margin-bottom: 0;
+  padding: 4px 0;
   font-size: 16px;
   max-width: 40%;
   color: $text_secondary;
@@ -1575,6 +1582,7 @@ ul {
   .popular-keywords p {
     max-width: none;
     text-align: center;
+    padding: 0;
   }
   .popular-keywords__items {
     justify-content: center;
@@ -1866,6 +1874,7 @@ ul {
   align-items: center;
   gap: 10px;
   width: fit-content;
+  transition: all .3s ease;
 }
 
 .introduction__item h4 a {
