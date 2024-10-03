@@ -9,6 +9,14 @@
 }
 
 @font-face {
+  font-family: 'Inter';
+  src: url($assets-inter-medium-woff2) format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Aspekta';
   src: url($assets-aspekta-600-woff2) format('woff2');
   font-weight: 600;
@@ -445,7 +453,8 @@ ul {
   border-radius: 50px;
   cursor: pointer;
   display: inline-block;
-  font-size: 18px;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.63px;
   margin: 0;
@@ -665,8 +674,8 @@ ul {
 }
 .form footer input {
   display: block;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 120%; /* 21.6px */
   letter-spacing: 0.63px;
   padding: 10px 30px;
@@ -1242,7 +1251,7 @@ ul {
 }
 
 .footer__list a {
-  font-weight: 550;
+  font-weight: 600;
 }
 
 .footer__bottom .container {
@@ -1258,7 +1267,7 @@ ul {
 }
 
 .footer__right a {
-  font-weight: 550;
+  font-weight: 600;
 }
 
 @media (max-width: 1199px) {
@@ -1544,19 +1553,19 @@ ul {
 
 .hero .search input[type=search], .error-page .search input[type=search]{
   border-radius: 50px;
-  padding: 15px 150px 15px 50px;
+  padding: 12px 150px 12px 50px;
   outline: none;
   color: $body_primary;
 }
 .hero .search input[type=submit], .error-page .search input[type=submit]{
   position: absolute;
   right: 0;
-  padding: 8px 28px;
+  padding: 10px 30px;
   border-radius: 50px;
   top: 50%;
   transform: translate(-6px, -50%);
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 120%; /* 21.6px */
   letter-spacing: 0.63px;
   cursor: pointer;
@@ -2356,12 +2365,18 @@ ul {
   position: relative;
 }
 
-.promoted-articles__head {
-  display: flex;
-  gap: 40px;
-  justify-content: space-between;
-  margin-bottom: 60px;
+.promoted-articles .container h2 {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 20px;
 }
+
+.promoted-articles .container > p {
+  text-align: center;
+  max-width: 645px;
+  margin: 0 auto 60px;
+}
+
 .promoted-articles__items {
   display: flex;
   gap: 20px 60px;
@@ -2380,18 +2395,13 @@ ul {
 }
 
 @media (max-width: 1023px) {
-  .promoted-articles__head {
-    margin-bottom: 40px;
-  }
   .promoted-articles__item {
     width: calc(50% - 30px);
   }
 }
 @media (max-width: 767px) {
-  .promoted-articles__head {
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
+  .promoted-articles .container > p {
+    margin-bottom: 40px;
   }
   .promoted-articles__item {
     max-width: 470px;
@@ -2782,7 +2792,7 @@ ul {
 }
 .error-page h1 {
   font-size: 120px;
-  font-weight: 550;
+  font-weight: 600;
   margin-bottom: 25px;
   color: $text_primary;
 }
@@ -2855,7 +2865,7 @@ ul {
 .recent-activity-item-parent {
   display: inline-block;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
   padding: 4px 10px;
   background-color: $background_quaternary_color;
@@ -2882,7 +2892,7 @@ ul {
 
 .recent-activity-item-link {
   font-size: 22px;
-  font-weight: 550;
+  font-weight: 600;
   line-height: 1.1;
   letter-spacing: normal;
   overflow: hidden;
@@ -3278,7 +3288,7 @@ ul {
 
 .nav__sections a.active {
   color: $hover_link_color;
-  font-weight: 550;
+  font-weight: 600;
 }
 
 .nav__sections a.active:hover {
@@ -3408,7 +3418,7 @@ ul {
 
 .nav__articles .current-article {
   color: $hover_link_color;
-  font-weight: 550;
+  font-weight: 600;
 }
 
 .nav__articles .current-article:hover {
@@ -3491,7 +3501,7 @@ ul {
 
 .article-meta a, .post-meta a {
     font-size: 18px;
-    font-weight: 550;
+    font-weight: 600;
     line-height: 1.2;
     letter-spacing: 0.18px;
     color: $text_primary;
@@ -3740,7 +3750,7 @@ ul {
 }
 
 .article-votes a {
-  font-weight: 550;
+  font-weight: 600;
   font-size: 16px;
 }
 .article-vote {
@@ -3972,7 +3982,7 @@ ul {
 .recent-articles-title,
 .related-articles-title {
   font-size: 22px;
-  font-weight: 550;
+  font-weight: 600;
   line-height: 120%; /* 28.8px */
   letter-spacing: -0.24px;
   margin: 5px 0 30px;
@@ -4589,7 +4599,7 @@ ul {
   margin: 10px 0;
 }
 .striped-list-item .meta-group a {
-  font-weight: 550;
+  font-weight: 600;
   color: $hover_link_color;
 }
 .striped-list-item .meta-group a:hover {
@@ -5044,7 +5054,7 @@ ul {
   border-radius: 4px;
   color: #fff;
   font-size: 12px;
-  font-weight: 550;
+  font-weight: 600;
   padding: 0px 8px;
   vertical-align: top;
   white-space: nowrap;
@@ -5074,7 +5084,7 @@ ul {
 
 .community-badge-achievements-rest {
   font-size: 12px;
-  font-weight: 550;
+  font-weight: 600;
   line-height: 20px;
   text-align: center;
   vertical-align: top;
@@ -5990,7 +6000,7 @@ ul {
 
 .profile-stats .stat-label {
   flex: 0 0 100px;
-  font-weight: 550;
+  font-weight: 600;
   margin-right: 10px;
 }
 [dir=rtl] .profile-stats .stat-label {
@@ -6225,7 +6235,7 @@ ul {
   margin-bottom: 10px;
 }
 .profile-badges-item-title {
-  font-weight: 550;
+  font-weight: 600;
 }
 .profile-badges-item-description, .profile-badges-item-metadata-description {
   color: lighten($text_color, 20%);
@@ -6435,7 +6445,7 @@ ul {
 }
 
 .profile-activity-description span:first-child {
-  font-weight: 550;
+  font-weight: 600;
   display: inline;
 }
 
@@ -6561,7 +6571,7 @@ ul {
   margin-bottom: 0;
 }
 .search-results-sidebar .sidenav-item:hover, .search-results-sidebar .sidenav-item.current span:first-of-type {
-  font-weight: 550;
+  font-weight: 600;
   color: $hover_link_color;
 }
 
@@ -6587,7 +6597,7 @@ ul {
 }
 .search-results-sidebar .sidenav-tag .content-tag .label {
   font-style: normal;
-  font-weight: 550;
+  font-weight: 600;
   font-size: 12px;
   line-height: 24px;
   text-align: center;
@@ -6690,7 +6700,7 @@ ul {
 }
 .search-result-title a {
   font-size: 20px;
-  font-weight: 550;
+  font-weight: 600;
   line-height: 120%; /* 24px */
   letter-spacing: -0.2px;
   color: $hover_link_color;
@@ -6794,7 +6804,7 @@ ul {
 }
 .search-result-bottom a {
   font-size: 14px;
-  font-weight: 550;
+  font-weight: 600;
   line-height: 140%;
   color: $hover_link_color;
 }
@@ -7063,7 +7073,7 @@ html[dir=rtl] .notification-left-aligned {
 }
 .dropdown-menu button {
   font-size: 16px;
-  font-weight: 550;
+  font-weight: 600;
   line-height: 120%;
   letter-spacing: 0.63px;
 }
@@ -7161,11 +7171,11 @@ html[dir=rtl] .notification-left-aligned {
 /***** BUTTON *****/
 
 .button {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 120%;
   display: inline-block;
   padding: 10px 30px;
-  font-weight: 400;
+  font-weight: 500;
   border-radius: 50px;
 }
 

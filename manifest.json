@@ -1,7 +1,7 @@
 {
   "name": "Zendo 128",
   "author": "128zen",
-  "version": "1.0.49",
+  "version": "1.0.50",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -872,18 +872,11 @@
           "value": "Promoted articles"
         },       
         {
-          "identifier": "fourth_section_button",
+          "identifier": "fourth_section_subtitle",
           "type": "text",
-          "description": "Enter text",
-          "label": "Section Button Text",
-          "value": "View all"
-        },
-        {
-          "identifier": "fourth_section_button_link",
-          "type": "text",
-          "description": "Insert link",
-          "label": "Section Button Link",
-          "value": "#"
+          "description": "Enter section subtitle",
+          "label": "Section Subtitle",
+          "value": "Deepen your knowledge with the most engaging content, curated just for you"
         }
       ]
     },

@@ -141,8 +141,8 @@
 {{!-- Quick Links Section --}}
 <section class="quick-links section">
   <div class="container">
-    <h2>{{settings.quick_links_heading}}</h2>
-    <p>{{settings.quick_links_subtitle}}</p>
+    <h2 class="fade-in-up">{{settings.quick_links_heading}}</h2>
+    <p class="fade-in-up">{{settings.quick_links_subtitle}}</p>
     <div class="quick-links__items">
       <div class="quick-links__item fade-in-up">
         <img src="{{settings.quick_links_item1_img}}" alt="icon">
@@ -384,12 +384,8 @@
   {{#if promoted_articles}}
     <section class="promoted-articles">
       <div class="container section">
-        <div class="promoted-articles__head">
-          <h2 class="fade-in-up">{{settings.fourth_section_heading}}</h2>
-          <div class="fade-in-up">
-            <a class="button button-primary" href="{{settings.fourth_section_button_link}}">{{settings.fourth_section_button}}</a>
-          </div>
-        </div>
+        <h2 class="fade-in-up">{{settings.fourth_section_heading}}</h2>
+        <p class="fade-in-up">{{settings.fourth_section_subtitle}}</p>
         <div class="promoted-articles__items">
           {{#each promoted_articles}}
             <div class="promoted-articles__item fade-in-up">
