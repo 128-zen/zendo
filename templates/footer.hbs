@@ -52,7 +52,9 @@
       <h3 class="fade-in-up">{{settings.footer_heading}}</h3>
       <div class="fade-in-up">
         <a class="button button-secondary" href="{{settings.footer_link}}">{{settings.footer_link_text}}</a>
-        <p>{{settings.footer_text}}</p>
+        {{#if settings.show_footer_text}}
+          <p>{{settings.footer_text}}</p>
+        {{/if}}
       </div>
     </div>
   </div>

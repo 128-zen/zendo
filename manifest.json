@@ -1,7 +1,7 @@
 {
   "name": "Zendo 128",
   "author": "128zen",
-  "version": "1.0.50",
+  "version": "1.0.51",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -1093,7 +1093,7 @@
           "type": "text",
           "description": "Enter section heading",
           "label": "Section Heading",
-          "value": "Find Solution"
+          "value": "Didn't find any solution?"
         },
         {
           "identifier": "find_solution_subtitle",
@@ -1303,6 +1303,13 @@
           "description": "Enter heading",
           "label": "Footer Heading",
           "value": "Can't find what you're looking for?"
+        },
+        {
+          "identifier": "show_footer_text",
+          "type": "checkbox",
+          "description": "Show footer subtitle",
+          "label": "Toggle Footer Subtitle",
+          "value": true
         },
         {
           "identifier": "footer_text",
