@@ -1,7 +1,7 @@
 {
   "name": "Zendo 128",
   "author": "128zen",
-  "version": "1.0.55",
+  "version": "1.0.56",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -870,13 +870,6 @@
           "description": "Enter section heading",
           "label": "Section Heading",
           "value": "Promoted articles"
-        },       
-        {
-          "identifier": "fourth_section_subtitle",
-          "type": "text",
-          "description": "Enter section subtitle",
-          "label": "Section Subtitle",
-          "value": "Deepen your knowledge with the most engaging content, curated just for you"
         }
       ]
     },
