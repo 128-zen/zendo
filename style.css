@@ -262,7 +262,7 @@ h6 {
 }
 
 .hero-text {
-  font-size: 72px;
+  font-size: 62px;
   letter-spacing: -1.61px;
   line-height: 110%;
   margin-bottom: 40px;
@@ -319,13 +319,22 @@ p {
 }
 
 .h2 {
-  font-size: 56px;
+  font-size: 50px;
   font-style: normal;
   font-weight: 600;
   line-height: 110%; 
   letter-spacing: -1.25px;
   color: $text_primary;
   font-family: $heading_font;
+}
+
+@media (min-width: 1920px) {
+  .hero-text {
+    font-size: 72px;
+  }
+  .h2 {
+    font-size: 56px;
+  }
 }
 
 @media (max-width: 1279px) {
@@ -1526,6 +1535,12 @@ ul {
   left: auto;
 }
 
+@media (min-width: 1920px) {
+  .hero .container {
+    padding-top: 190px;
+  }
+}
+
 @media (max-width: 1023px) {
   .hero .container {
     padding-top: 110px;
@@ -2002,11 +2017,11 @@ ul {
   background-color: $background_primary_color;
 }
 
-.quick-links__item:first-of-type h3 a, .quick-links__item:first-of-type p, .quick-links__item:first-of-type div div {
+.quick-links__item:first-of-type h4 a, .quick-links__item:first-of-type p, .quick-links__item:first-of-type div div {
   color: $text_secondary;
 }
 
-.quick-links__item:first-of-type h3 a:hover {
+.quick-links__item:first-of-type h4 a:hover {
   color: $hover_link_color;
 }
 
@@ -2016,7 +2031,7 @@ ul {
   height: fit-content;
 }
 
-.quick-links__item h3 {
+.quick-links__item h4 {
   margin-bottom: 20px;
 }
 
