@@ -328,21 +328,11 @@ p {
   font-family: $heading_font;
 }
 
-.h3 {
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  letter-spacing: -0.47px;
-  color: $text_primary;
-  font-family: $heading_font;
-}
-
 @media (max-width: 1279px) {
   .hero-text {
     font-size: 60px;
   }
-  .h3 {
+  h3 {
     font-size: 36px;
   }
 }
@@ -356,9 +346,6 @@ p {
   }
   h2 {
     font-size: 38px;
-  }
-  h3 {
-    font-size: 36px;
   }
   .h2 {
     font-size: 46px;
@@ -1175,7 +1162,7 @@ ul {
   color: $hover_link_color;
 }
 
-.submit-request .h3 {
+.submit-request h3 {
   max-width: 380px;
   color: $text_secondary;
 }
@@ -1197,7 +1184,7 @@ ul {
   .footer__top {
     padding-top: 80px;
   }
-  .submit-request .h3 {
+  .submit-request h3 {
     max-width: 350px;
   }
 }
@@ -1218,7 +1205,7 @@ ul {
     margin-top: 0;
     text-align: center;
   }
-  .submit-request .h3 {
+  .submit-request h3 {
     max-width: none;
   }
 }
@@ -2025,7 +2012,7 @@ ul {
 
 .quick-links__item img {
   flex: 0 0 auto;
-  max-width: 80px;
+  max-width: 60px;
   height: fit-content;
 }
 
@@ -3034,7 +3021,7 @@ ul {
   color: $body_secondary;
 }
 
-.category-page .hero svg {
+.category-page .hero > svg {
   bottom: 0;
   top: auto;
 }
