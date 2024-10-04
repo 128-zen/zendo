@@ -2377,6 +2377,9 @@ ul {
   .categories__section ul {
     margin-top: 20px;
   }
+  .categories__head > div, .videos__head > div {
+    display: none;
+  }
 }
 
 /***** Promoted articles *****/
@@ -2703,7 +2706,7 @@ ul {
 }
 
 .find-solution__item > a:hover {
-  color: $text__primary;
+  color: $text_primary;
 }
 
 @media (max-width: 1279px) {
@@ -3205,6 +3208,9 @@ ul {
   }
   .category-page .hero p {
     margin-bottom: 40px;
+  }
+  .category-page__section-heading a {
+    display: none;
   }
 }
 
@@ -7129,6 +7135,17 @@ html[dir=rtl] .notification-left-aligned {
   border: none;
 }
 
+.mobile-button {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-button {
+    display: flex;
+    padding-top: 40px;
+    justify-content: center;
+  }
+}
 /***** Padding-top *****/
 .padding-top {
   padding-top: 100px;

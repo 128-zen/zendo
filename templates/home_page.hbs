@@ -327,6 +327,9 @@
         </div>
       </div>
     {{/each}}
+    <div class="mobile-button fade-in-up">
+      <a class="button button-primary" href="{{url}}">{{t 'see_all_sections'}}</a>
+    </div>
   </div>
 </section>
 {{/if}}
@@ -403,7 +406,9 @@
   <div class="container">
     <div class="videos__head">
       <h2 class="h2 fade-in-up">{{settings.videos_heading}}</h2>
-      <a class="button button-primary" href="{{settings.videos_button_link}}" target="_blank">{{settings.videos_button}}</a>
+      <div class="fade-in-up">
+        <a class="button button-primary" href="{{settings.videos_button_link}}" target="_blank">{{settings.videos_button}}</a>
+      </div>
     </div>
     <div class="videos__list">
       <div class="videos__item fade-in-up">
@@ -460,6 +465,9 @@
           </svg>
         </div>
       </div>
+    </div>
+    <div class="mobile-button fade-in-up">
+      <a class="button button-primary" href="{{settings.videos_button_link}}" target="_blank">{{settings.videos_button}}</a>
     </div>
   </div>
 
