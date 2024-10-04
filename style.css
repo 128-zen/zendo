@@ -2175,6 +2175,7 @@ ul {
 @media (max-width: 767px) {
   .resources__items {
     gap: 20px;
+    justify-content: center;
   }
   .resources__item {
     max-width: 370px;
