@@ -2700,16 +2700,6 @@ ul {
   margin-bottom: 12px;
 }
 
-.find-solution__item > a {
-  display: inline-block;
-  margin-bottom: 12px;
-  color: $hover_link_color;
-}
-
-.find-solution__item > a:hover {
-  color: $text_primary;
-}
-
 @media (max-width: 1279px) {
   .find-solution > svg {
     bottom: 0;
