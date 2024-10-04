@@ -1,7 +1,7 @@
 {
   "name": "Zendo 128",
   "author": "128zen",
-  "version": "1.0.61",
+  "version": "1.0.62",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -1138,9 +1138,9 @@
         {
           "identifier": "find_solution_item2_link",
           "type": "text",
-          "description": "Insert link",
-          "label": "Item 2 Link",
-          "value": "#"
+          "description": "Insert phone number",
+          "label": "Item 2 Phone Number",
+          "value": "123456789"
         },
         {
           "identifier": "find_solution_item2_text",
