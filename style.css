@@ -277,7 +277,7 @@ h1 {
 
 h2 {
   font-size: 44px;
-  line-height: normal;
+  line-height: 110%;
   letter-spacing: -1.25px;
 }
 
@@ -289,19 +289,19 @@ h3 {
 
 h4 {
   font-size: 26px;
-  line-height: normal; 
+  line-height: 110%; 
   letter-spacing: -0.47px;
 }
 
 h5 {
   font-size: 24px;
-  line-height: normal; /* 30.8px */
+  line-height: 110%; /* 30.8px */
   letter-spacing: -0.47px;
 }
 
 h6 {
   font-size: 22px;
-  line-height: normal;
+  line-height: 110%;
   letter-spacing: -0.47px;
 }
 
@@ -332,7 +332,7 @@ p {
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
-  line-height: normal;
+  line-height: 120%;
   letter-spacing: -0.47px;
   color: $text_primary;
   font-family: $heading_font;
@@ -1872,12 +1872,7 @@ ul {
 
 /***** Home page *****/
 .section {
-  padding-bottom: 120px;
-}
-@media (max-width: 1279px) {
-  .section {
-    padding-bottom: 100px;
-  }
+  padding-bottom: 100px;
 }
 @media (max-width: 1023px) {
   .section {
@@ -2643,7 +2638,7 @@ ul {
 /* Find Solution */
 .find-solution {
   position: relative;
-  padding: 120px 0 280px;
+  padding: 100px 0 260px;
   overflow: hidden;
   background-color: $background_secondary_color;
 }
@@ -2700,9 +2695,6 @@ ul {
 }
 
 @media (max-width: 1279px) {
-  .find-solution {
-    padding: 100px 0 260px;
-  }
   .find-solution > svg {
     bottom: 0;
   }
@@ -2734,7 +2726,7 @@ ul {
 
 /***** Submit a request page *****/
 .submit-request-page, .new-post-page {
-  padding: 80px 0 120px;
+  padding: 80px 0 100px;
   position: relative;
   overflow: hidden;
 }
@@ -2768,12 +2760,6 @@ ul {
   border-radius: 0 0 12px 12px;
 }
 
-@media(max-width: 1279px) {
-  .submit-request-page, .new-post-page {
-    padding-bottom: 100px;
-  }
-}
-
 @media(max-width: 1023px) {
   .submit-request-page, .new-post-page {
     padding-bottom: 80px;
@@ -2794,7 +2780,7 @@ ul {
 .error-page {
   text-align: center;
   padding-top: 60px;
-  padding-bottom: 120px;
+  padding-bottom: 100px;
   flex-grow: 1;
 }
 .error-page .container {
@@ -3043,7 +3029,8 @@ ul {
   text-align: center;
   font-size: 20px;
   margin-top: 40px;
-  max-width: 645px;
+  margin-bottom: 60px;
+  max-width: 800px;
   color: $body_secondary;
 }
 
@@ -3053,7 +3040,7 @@ ul {
 }
 
 .category-page__content {
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 .category-page__content>h2 {
@@ -3070,7 +3057,7 @@ ul {
 .category-page__sections {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: 100px;
   justify-content: center;
 }
 
@@ -3159,15 +3146,18 @@ ul {
 
 
 @media(max-width: 1279px) {
-  .category-page__content {
-    padding-top: 100px;
-  }
   .category-page .hero .container {
     padding-top: 150px;
   }
 }
 
 @media(max-width: 1023px) {
+  .category-page .hero .container {
+    padding-top: 110px;
+  }
+  .category-page .hero p {
+    max-width: 700px;
+  }
   .category-page__content {
     padding-top: 80px;
   }
@@ -3193,12 +3183,16 @@ ul {
   .category-page__section-heading {
     flex-direction: column;
     gap: 20px;
+    align-items: center;
   }
   .category-page__sections {
     text-align: left;
   }
   .category-page__article {
     width: 100%;
+  }
+  .category-page .hero p {
+    margin-bottom: 40px;
   }
 }
 
@@ -4466,7 +4460,7 @@ ul {
 
 /* Community topics grid */
 .topics {
-  padding-top: 120px;
+  padding-top: 100px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -4497,12 +4491,6 @@ ul {
 }
 .activity .button {
   margin-top: 50px;
-}
-
-@media (max-width: 1279px) {
-  .topics {
-    padding-top: 100px;
-  }
 }
 
 @media (max-width: 1023px) {
@@ -4667,21 +4655,13 @@ ul {
 }
 .post-list-page .posts {
   background-color: $background_primary_color;
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 .post-list-page .community-featured-posts, .community-page .community-featured-posts {
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
-@media (max-width: 1279px) {
-  .post-list-page .community-featured-posts, .community-page .community-featured-posts {
-    padding-top: 100px;
-  }
-  .post-list-page .posts {
-    padding-top: 100px;
-  }
-}
 
 @media (max-width: 1023px) {
   .post-list-page .community-featured-posts, .community-page .community-featured-posts {
@@ -4811,7 +4791,7 @@ ul {
 .post-container {
   display: flex;
   flex-direction: column;
-  padding-bottom: 120px;
+  padding-bottom: 100px;
 }
 @media (min-width: 1024px) {
   .post-container {
@@ -5051,11 +5031,6 @@ ul {
   }
 }
 
-@media (max-width: 1279px) {
-  .post-container {
-    padding-bottom: 100px;
-  }
-}
 
 @media (max-width: 1023px) {
   .post-container {
@@ -5424,7 +5399,7 @@ ul {
   width: 100%;
 }
 .requests {
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 .requests-table-toolbar {
   display: flex;
@@ -5433,11 +5408,6 @@ ul {
 @media (max-width: 767px) {
   .requests-page .search {
     max-width: none;
-  }
-}
-@media (max-width: 1279px) {
-  .requests {
-    margin-bottom: 100px;
   }
 }
 @media (max-width: 1023px) {
@@ -5613,12 +5583,7 @@ ul {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 120px;
-}
-@media (max-width: 1279px) {
-  .request-container {
-    margin-bottom: 100px;
-  }
+  margin-bottom: 100px;
 }
 @media (max-width: 1023px) {
   .request-container {
@@ -6153,7 +6118,7 @@ ul {
 
 .profile-section {
   width: 100%;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 @media (min-width: 1024px) {
   .profile-section {
@@ -6570,7 +6535,7 @@ ul {
 
 .search-results-page .container {
   padding-top: 80px;
-  padding-bottom: 120px;
+  padding-bottom: 100px;
   display: flex;
   gap: 50px;
 }
@@ -6775,11 +6740,7 @@ ul {
     margin-right: 20px;
   }
 }
-@media (max-width: 1279px) {
-  .search-results-page .container {
-    padding-bottom: 100px;
-  }
-}
+
 @media (max-width: 1023px) {
   .search-results-page .container {
     padding-bottom: 80px;
@@ -7161,13 +7122,7 @@ html[dir=rtl] .notification-left-aligned {
 
 /***** Padding-top *****/
 .padding-top {
-  padding-top: 120px;
-}
-
-@media (max-width: 1279px) {
-  .padding-top {
-    padding-top: 100px;
-  }
+  padding-top: 100px;
 }
 
 @media (max-width: 1023px) {
