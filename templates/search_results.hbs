@@ -135,7 +135,7 @@
 
     <section id="main-content" class="search-results-column">
       {{#if results}}
-        <h1>
+        <h1 class="search-results-heading">
           {{#is current_filter.identifier 'unified'}}
             {{#if content_tag_filters }}
               {{#each (filter content_tag_filters on="selected" equals=true)}}
