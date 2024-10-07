@@ -319,7 +319,7 @@ p {
 }
 
 .h2 {
-  font-size: 50px;
+  font-size: 44px;
   font-style: normal;
   font-weight: 600;
   line-height: 110%; 
@@ -357,7 +357,7 @@ p {
     font-size: 38px;
   }
   .h2 {
-    font-size: 46px;
+    font-size: 38px;
   }
 }
 
@@ -375,7 +375,7 @@ p {
     font-size: 30px;
   }
   .h2 {
-    font-size: 40px;
+    font-size: 36px;
   }
 }
 a {
@@ -2845,7 +2845,7 @@ ul {
 }
 
 .homepage-activity .recent-activity h2 {
-  font-size: 56px;
+  font-size: 44px;
 }
 .recent-activity-list {
   display: flex;
@@ -2995,9 +2995,15 @@ ul {
   margin-left: 0;
   margin-right: 3px;
 }
+@media (min-width: 1920px) {
+  .homepage-activity .recent-activity h2 {
+    font-size: 56px;
+  }
+}
+
 @media (max-width: 1023px) {
   .homepage-activity .recent-activity h2 {
-    font-size: 46px;
+    font-size: 38px;
   }
   .recent-activity-list {
     margin-top: 40px;
@@ -3008,7 +3014,7 @@ ul {
 }
 @media (max-width: 767px) {
   .homepage-activity .recent-activity h2 {
-    font-size: 40px;
+    font-size: 36px;
   }
   .recent-activity-list {
     gap: 20px;
