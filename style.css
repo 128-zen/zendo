@@ -1541,6 +1541,34 @@ ul {
   left: auto;
 }
 
+.hero > svg:first-of-type radialGradient stop {
+  stop-color: $background_elements_color1;
+}
+
+.hero > svg:first-of-type radialGradient:last-of-type stop {
+  stop-color: $background_elements_color2;
+}
+
+.hero > svg:nth-of-type(2) radialGradient stop {
+  stop-color: $background_elements_color2;
+}
+
+.hero > svg:nth-of-type(2) radialGradient:last-of-type stop {
+  stop-color: $background_elements_color1;
+}
+
+.hero > svg:nth-of-type(3) radialGradient:first-of-type stop, .hero > svg:nth-of-type(3) linearGradient stop {
+  stop-color: $background_elements_color3;
+}
+
+.hero > svg:nth-of-type(3) radialGradient:nth-of-type(2) stop {
+  stop-color: $background_elements_color4;
+}
+
+.hero > svg:nth-of-type(3) radialGradient:nth-of-type(3) stop {
+  stop-color: $background_elements_color5;
+}
+
 @media (min-width: 1920px) {
   .hero .container {
     padding-top: 190px;
