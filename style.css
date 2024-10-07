@@ -1180,6 +1180,7 @@ ul {
   font-size: 18px;
   margin-top: 20px;
   text-align: right;
+  max-width: 350px;
   color: $body_secondary;
 }
 
