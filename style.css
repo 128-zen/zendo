@@ -1557,8 +1557,12 @@ ul {
   stop-color: $background_elements_color1;
 }
 
-.hero > svg:nth-of-type(3) radialGradient:first-of-type stop, .hero > svg:nth-of-type(3) linearGradient stop {
+.hero > svg:nth-of-type(3) radialGradient:first-of-type stop {
   stop-color: $background_elements_color3;
+}
+
+.hero > svg:nth-of-type(3) linearGradient stop {
+  stop-color: $background_elements_color1;
 }
 
 .hero > svg:nth-of-type(3) radialGradient:nth-of-type(2) stop {
@@ -2148,6 +2152,18 @@ ul {
   transform: translateX(-50%);
 }
 
+.resources > svg radialGradient:first-of-type stop {
+  stop-color: $background_elements_color2;
+}
+
+.resources > svg radialGradient:nth-of-type(2) stop {
+  stop-color: $background_elements_color1;
+}
+
+.resources > svg radialGradient:last-of-type stop {
+  stop-color: $background_elements_color4;
+}
+
 .resources .container {
   position: relative;
   z-index: 2;
@@ -2695,6 +2711,18 @@ ul {
   bottom: 160px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.find-solution > svg radialGradient:first-of-type stop {
+  stop-color: $background_elements_color2;
+}
+
+.find-solution > svg radialGradient:nth-of-type(2) stop {
+  stop-color: $background_elements_color1;
+}
+
+.find-solution > svg radialGradient:last-of-type stop {
+  stop-color: $background_elements_color4;
 }
 
 .find-solution .container {
