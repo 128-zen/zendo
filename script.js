@@ -278,10 +278,10 @@
   });
 
   document.addEventListener('DOMContentLoaded', function() {
-    if (document.querySelector('.hero')) {
+    if (!document.querySelector('.hero')) {
         const header = document.querySelector('.header');
         if (header) {
-            header.style.backgroundColor = 'transparent';
+            header.classList.add('background-color');
         }
     }
   });
