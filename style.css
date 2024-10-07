@@ -1766,7 +1766,7 @@ ul {
   background-color: $background_quaternary_color;
 }
 .topics-item > h5 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .blocks-item {
   display: flex;
