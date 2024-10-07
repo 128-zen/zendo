@@ -1765,6 +1765,9 @@ ul {
   border-radius: 10px;
   background-color: $background_quaternary_color;
 }
+.topics-item > h5 {
+  margin-bottom: 10px;
+}
 .blocks-item {
   display: flex;
   width: calc(33.3% - 20px);
@@ -4839,6 +4842,7 @@ ul {
 .post-title h1 {
   display: inline;
   vertical-align: middle;
+  line-height: 110%;
 }
 @media (min-width: 768px) {
   .post-title h1 {
