@@ -789,17 +789,22 @@ ul {
 }
 .logo span {
   margin: 0 10px;
-  color: $brand_color;
+  flex: 0 0 auto;
 }
 
 .logo a {
   display: flex;
   align-items: center;
+  color: $text_secondary;
 }
 
 .logo a:hover, .logo a:focus, .logo a:active {
   text-decoration: none;
   opacity: 1;
+}
+
+.logo a:hover {
+  color: $hover_link_color;
 }
 
 .user-nav {

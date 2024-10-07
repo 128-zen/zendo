@@ -1,7 +1,7 @@
 {
   "name": "Zendo 128",
   "author": "128zen",
-  "version": "1.0.70",
+  "version": "1.0.71",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -422,6 +422,41 @@
           "description": "Show hero subtitle",
           "label": "Toggle Subtitle Component",
           "value": true
+        },
+        {
+          "identifier": "background_elements_color1",
+          "type": "color",
+          "description": "Choose the color for background element 1",
+          "label": "Background Element Color 1",
+          "value": "#9058EB"
+        },
+        {
+          "identifier": "background_elements_color2",
+          "type": "color",
+          "description": "Choose the color for background element 2",
+          "label": "Background Element Color 2",
+          "value": "#6658EB"
+        },
+        {
+          "identifier": "background_elements_color3",
+          "type": "color",
+          "description": "Choose the color for background element 3",
+          "label": "Background Element Color 3",
+          "value": "#CE58EB"
+        },
+        {
+          "identifier": "background_elements_color4",
+          "type": "color",
+          "description": "Choose the color for background element 4",
+          "label": "Background Element Color 4",
+          "value": "#EB5861"
+        },
+        {
+          "identifier": "background_elements_color5",
+          "type": "color",
+          "description": "Choose the color for background element 5",
+          "label": "Background Element Color 5",
+          "value": "#FF7D6B"
         }
       ]
     },
@@ -1323,118 +1358,6 @@
           "type": "text",
           "description": "Insert link",
           "label": "Footer Link",
-          "value": "#"
-        },
-        {
-          "identifier": "footer_description",
-          "type": "text",
-          "description": "Enter description",
-          "label": "Footer Description",
-          "value": "Forgot your password? Learn how to reset your password from the sign in page or your account settings."
-        },
-        {
-          "identifier": "footer_list_item1",
-          "type": "text",
-          "description": "Enter text",
-          "label": "Footer List Item 1",
-          "value": "Home"
-        },
-        {
-          "identifier": "footer_list_item1_url",
-          "type": "text",
-          "description": "Insert link",
-          "label": "Footer List Item 1 URL",
-          "value": "#"
-        },
-        {
-          "identifier": "footer_list_item2",
-          "type": "text",
-          "description": "Enter text",
-          "label": "Footer List Item 2",
-          "value": "What's new"
-        },
-        {
-          "identifier": "footer_list_item2_url",
-          "type": "text",
-          "description": "Insert link",
-          "label": "Footer List Item 2 URL",
-          "value": "#"
-        },
-        {
-          "identifier": "footer_list_item3",
-          "type": "text",
-          "description": "Enter text",
-          "label": "Footer List Item 3",
-          "value": "Documentation"
-        },
-        {
-          "identifier": "footer_list_item3_url",
-          "type": "text",
-          "description": "Insert link",
-          "label": "Footer List Item 3 URL",
-          "value": "#"
-        },
-        {
-          "identifier": "show_footer_list_item4",
-          "type": "checkbox",
-          "description": "Show footer list item 4",
-          "label": "Toggle Footer List Item 4",
-          "value": true
-        },
-        {
-          "identifier": "footer_list_item4",
-          "type": "text",
-          "description": "Enter text",
-          "label": "Footer List Item 4",
-          "value": "Blog"
-        },
-        {
-          "identifier": "footer_list_item4_url",
-          "type": "text",
-          "description": "Insert link",
-          "label": "Footer List Item 4 URL",
-          "value": "#"
-        },
-        {
-          "identifier": "show_footer_list_item5",
-          "type": "checkbox",
-          "description": "Show footer list item 5",
-          "label": "Toggle Footer List Item 5",
-          "value": true
-        },
-        {
-          "identifier": "footer_list_item5",
-          "type": "text",
-          "description": "Enter text",
-          "label": "Footer List Item 5",
-          "value": "Shop"
-        },
-        {
-          "identifier": "footer_list_item5_url",
-          "type": "text",
-          "description": "Insert link",
-          "label": "Footer List Item 5 URL",
-          "value": "#"
-        },
-        {
-          "identifier": "show_footer_list_item6",
-          "type": "checkbox",
-          "description": "Show footer list item 6",
-          "label": "Toggle Footer List Item 6",
-          "value": true
-        },
-        {
-          "identifier": "footer_list_item6",
-          "type": "text",
-          "description": "Enter text",
-          "label": "Footer List Item 6",
-          "value": "Contact"
-        },
-        {
-          "identifier": "footer_list_item6_url",
-          "type": "text",
-          "description": "Insert link",
-          "label": "Footer List Item 6 URL",
           "value": "#"
         },
         {
