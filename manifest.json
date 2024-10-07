@@ -1,7 +1,7 @@
 {
   "name": "Zendo 128",
   "author": "128zen",
-  "version": "1.0.73",
+  "version": "1.0.74",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -424,6 +424,20 @@
           "value": true
         },
         {
+          "identifier": "background_banner_color",
+          "type": "color",
+          "description": "Choose the color for banner background",
+          "label": "Banner Background Color",
+          "value": "#0A2540"
+        },
+        {
+          "identifier": "show_hero_elements",
+          "type": "checkbox",
+          "description": "Show banner background elements",
+          "label": "Toggle Banner Background Elements",
+          "value": true
+        },
+        {
           "identifier": "background_elements_color1",
           "type": "color",
           "description": "Choose the color for background element 1",
@@ -676,6 +690,13 @@
           "type": "checkbox",
           "description": "Show section",
           "label": "Toggle Section",
+          "value": true
+        },
+        {
+          "identifier": "show_resources_elements",
+          "type": "checkbox",
+          "description": "Show section background elements",
+          "label": "Toggle Section Background Elements",
           "value": true
         },
         {
@@ -1116,6 +1137,13 @@
     {
       "label": "Homepage Find Solution Section",
       "variables": [
+        {
+          "identifier": "show_find_solution_elements",
+          "type": "checkbox",
+          "description": "Show section background elements",
+          "label": "Toggle Section Background Elements",
+          "value": true
+        },
         {
           "identifier": "find_solution_heading",
           "type": "text",

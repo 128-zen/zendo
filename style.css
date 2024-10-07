@@ -1498,7 +1498,7 @@ ul {
   margin-top: -88px;
   overflow: hidden;
   position: relative;
-  background-color: $background_primary_color;
+  background-color: $background_banner_color;
 }
 .hero .container {
   display: flex;
